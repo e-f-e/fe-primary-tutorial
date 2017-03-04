@@ -1,6 +1,10 @@
-# [Marksheet](http://marksheet.io): a free HTML and CSS tutorial
+# HTML、CSS 系列教程
 
-[![Marksheet screenshot](https://raw.github.com/jgthms/marksheet/master/images/marksheet-free-html-css-tutorial.png)](http://marksheet.io)
+本教程主要为 [Marksheet](http://marksheet.io) 的中文翻译版，并在此基础上进行修正，以更方便中文读者进行学习。
+
+## [Marksheet](http://marksheet.io): a free HTML and CSS tutorial
+
+
 
 # License
 
