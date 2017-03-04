@@ -5,3 +5,4 @@ kramdown:
   input: GFM
 exclude: ['images/original']
 permalink: :title.html
+baseurl: fe-primary-tutorial
