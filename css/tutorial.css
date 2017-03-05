@@ -13,3 +13,9 @@
 body  .page-body {
     background-color: #F5F5D3;
 }
+
+.toc-head .container h2 {
+    padding: 10px 15px;
+    color: #fff;
+    font-weight: 700;
+}
