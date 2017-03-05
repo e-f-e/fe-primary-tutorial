@@ -10,11 +10,15 @@
     }
 }
 
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
 body  .page-body {
     background-color: #F5F5D3;
 }
 
-.page-body .toc-head .container h3 {
+.page-body .toc-head .container h2 {
     padding: 10px;
     color: #fff;
     font-weight: 700;
