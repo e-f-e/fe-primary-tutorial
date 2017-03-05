@@ -1,10 +1,11 @@
 ---
 layout: chapter
-title: "Introduction"
-subtitle: "An overview of how the <strong>Web</strong> works"
+title: "简介"
+subtitle: "简单的介绍 Web 的工作原理"
 section: web
 ---
 
-Before diving into the technical and practical aspect of coding, you need to have a **basic** understanding of how the underlying _environment_ works.
+在正式开始学习和代码实战之前，你应该要对整个 web 的工作原理有一个基本的了解。
 
-This introduction is meant to provide a quick overview of both the **Internet** and the **Web**.
+本课程将会从因特网和 web 两个点来带你快速的理解整个网络系统。
+
