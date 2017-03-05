@@ -2,6 +2,7 @@
 
 
 本教程主要为 [Marksheet](http://marksheet.io) 的中文翻译版，并在此基础上进行修正，以更方便中文读者进行学习。
+* 原文 github: [https://github.com/jgthms/marksheet](https://github.com/jgthms/marksheet)
 
 ## 翻译认领（`/posts`目录）
     * introduction.md - @yangxiaofu
