@@ -13,9 +13,9 @@
 * 提交 PR
 
 ## 翻译认领（`/posts`目录）
-    * introduction.md - @yangxiaofu
-    * internet.md - @yangxiaofu
-    * web.md - @yangxiaofu
+    * introduction.md - @yangxiaofu - 状态(翻译中)
+    * internet.md - @yangxiaofu - 状态(翻译中)
+    * web.md - @yangxiaofu - 状态(翻译中)
     * ...
 
 ## License
