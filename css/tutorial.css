@@ -1,0 +1,15 @@
+@media screen and (min-width: 1400px) {
+    .container {
+        max-width: auto;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .container {
+        max-width: auto;
+    }
+}
+
+body  .page-body {
+    background-color: #F5F5D3;
+}
