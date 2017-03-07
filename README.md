@@ -16,11 +16,10 @@
     * introduction.md - @yangxiaofu - 状态(翻译中)
     * internet.md - @yangxiaofu - 状态(翻译中)
     * web.md - @yangxiaofu - 状态(翻译中)
-    * ...
+    * browser.md - @xiaowang - 状态(翻译中)
 
 ## License
 
-* MIT 
+* MIT
 
 * 遵循创意共享4.0协议: [http://creativecommons.org/licenses/by-nc-sa/4.0/](http://creativecommons.org/licenses/by-nc-sa/4.0/)
-
