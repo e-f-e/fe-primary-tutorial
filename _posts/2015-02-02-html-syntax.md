@@ -1,102 +1,115 @@
 ---
 layout: post
-title: "HTML <strong>Syntax</strong>"
+title: "HTML <strong>语法</strong>"
 subtitle: "As any language, HTML has <strong>rules</strong>"
 section: html
 ---
 
-**HTML** stands for **H**yper**T**ext **M**arkup **L**anguage:
+**HTML**  **H**yper**T**ext **M**arkup **L**anguage:（超文本标记语言）
 
-* **HyperText** means that it uses the HTTP part of the Internet
-* **Markup** means the code you write is annotated with keywords
-* **Language** means it can be read by both a human and a computer
+* **超文本(HyperText)**  代表着它通过HTTP协议在网络上传输
+* **标记(Markup)** 代表着它的代码是一些可以解释的关键词
+* **语言(Language)** 代表它可以被人和机器阅读
 
-Like any language, HTML comes with a set of **rules**. These rules are relatively simple. It comes down to defining **boundaries**, to know where something _starts_ and where something _ends_.
+HTML 有一套相对于其它语言更简单的规则，HTML通过**边界**来区别什么时候开始和结束。
 
-Here is a sample paragraph in HTML:
+
+以下是一个简单的代表段落的HTML代码：
 
 {% highlight html %}
-<p>If Tetris has taught me anything it's that errors pile up and accomplishments disappear.</p>
+<p>这是一个段落，一般我们将段落写在p标签内。</p>
 {% endhighlight %}
 
-<div class="result"><p>If Tetris has taught me anything it's that errors pile up and accomplishments disappear.</p></div>
+<div class="result"><p>这是一个段落，一般我们将段落写在p标签内。</p></div>
 
-What you see in **angle brackets** `<`{:.language-html} and `>`{:.language-html} are HTML **tags**. They define where something _starts_ and where it _ends_.
+上面的尖括号`<`{:.language-html} and `>`{:.language-html} 就是HTML标签，它定义网页内一些内容的开始和结束。
 
-Each of them carry a specific **meaning**. In this case, `p`{:.language-html} stands for **paragraph**.
+每一个标签都有明确的**意义**，比如说上面这个例子`p`{:.language-html}代表着 **段落**。
 
-They usually go in pairs:
 
-* the _opening_ tag `<p>`{:.language-html} defines the **start** of the paragraph
-* the _closing_ tag `</p>`{:.language-html} defines its **end**
+标签通常成对出现：
 
-The only difference between an opening and closing tag is the **slash** `/`{:.language-html} that precedes the name of the tag.
+* 开始标签 `<p>`{:.language-html} 定义段落的**开始**
+* 闭合标签 `</p>`{:.language-html} 定义段落的**闭合**
 
-When you combine an opening tag, a closing tag, and everything in between, you obtain an **HTML element**. The whole line is an HTML element that uses the HTML tags `<p>`{:.language-html} and `</p>`{:.language-html}.
+开始标签和闭合标签的书写区别在于，闭合标签的标签名前带一个`/`{:.language-html}。
 
-If you [view this sample in your browser](/html/sample-paragraph.html), you'll notice that **HTML tags are not displayed** by the browser. They are only _read_ by the browser to know what _type_ of **content** you've written.
+如果你用开始标签和闭合标签包含了一些内容，你将获得一个**HTML 元素**。上面的例子就是通过`<p>`{:.language-html}和`</p>`{:.language-html}创建了一个HTML 元素。
 
-### Where to write HTML
+你可以 [在浏览器中查看](/html/sample-paragraph.html)这个例子，你会发现，**HTML标签并没有在页面中显示**。这些标签只用来让浏览器 _识别_ 你写的**内容**的 _类型_。
 
-You've probably come across simple text files, those that have a `.txt` extension.
+### 在哪里写HTML
 
-For such a text file to become an **HTML document** (instead of a text document), you need to use an `.html` extension.
+你肯定写过文本文件，文本文件的后缀名是`.txt`。
 
-Open your **text editor**, and copy paste the following:
+你可以通过修改后缀名，把`.txt`改为`.html`来创建一个**HTML 文档**。
 
-{% highlight html %}
-<p>This is my firstwebpage!</p>
-{% endhighlight %}
-
-Save this file as `my-first-webpage.html` and just open it with your browser, and you'll see:
-
-<div class="result"><p>This is my firstwebpage!</p></div>
-
-Remember:
-
-* use a text editor like Notepad++ to **create** HTML documents
-* use a browser like Firefox to **open** HTML documents
-
-### Attributes
-
-Attributes act like **extra** information tied to an HTML element. They are written _within_ an HTML _tag_. As such, they are not displayed by the browser either.
-
-For example, the `href` attribute is used to define the target of a **link** (which uses an **a**nchor tag): 
+复制下面的内容到你的文本编辑器
 
 {% highlight html %}
-<a href="http://www.mozilla.com/firefox">Download Firefox</a>
-{% endhighlight %}
-
-<div class="result"><a href="http://www.mozilla.com/firefox">Download Firefox</a></div>
-
-There are [16 HTML attributes](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes) that can be used on _any_ HTML element. All of them are **optional**.
-
-You'll mostly use `class` (which is used for CSS), and `title` (which is the tooltip that appears when hovering an item like this one).
-
-Some HTML elements have **obligatory** attributes. For example, when inserting an image, you have to provide the location of the image, using the `src` (source) attribute:
-
-{% highlight html %}
-<img src="#" alt="Description of the image">
-{% endhighlight %}
-
-Considering that the purpose of the `<img>` element is to display an image, it makes sense for the path to the image to be **required**.
-
-### Comments
-
-If you write something in your code without disrupting how the browser will display your page, you can write **comments**. They will be _ignored_ by the browser, and are only useful for us humans who write the code.
-
-A comment starts with `<!--` and ends with `-->`.
-
-{% highlight html %}
-<!-- This sentence will be ignored by the browser -->
 <p>Hello World!</p>
 {% endhighlight %}
 
+将它保存为 `my-first-webpage.html` 并且通过浏览器打开它，你可以看到以下内容：
+
 <div class="result"><p>Hello World!</p></div>
 
-### Self-enclosing elements
+注意：
+* 使用Notepad++、Sublime Text 等文本编辑器来**创建**HTML文档。
+* 使用Chrome、Firefox来**打开**HTML文档。
 
-Some HTML elements only have an opening tag:
+### 属性
+
+
+属性可以给HTML元素附加其它信息，属性写在HTML_标签里面_。当然，HTML属性也不会在浏览器上显示出来。
+
+
+例子：`href`属性用来给`a`标签定义一个**链接**
+
+{% highlight html %}
+<a href="http://www.mozilla.com/firefox">下载 Firefox</a>
+{% endhighlight %}
+
+<div class="result"><a href="http://www.mozilla.com/firefox">下载 Firefox</a></div>
+
+
+这里有[通用HTML属性](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes) 可以被用在任意一个HTML元素上，并且这些属性都是可选的。
+
+
+我们以后主要会用`class`(用于CSS选择器的名字)，`title`（鼠标移入元素后一段时间显示的提示）
+
+有些HTML元素**必选**的属性，比如，插入一张图片，你需要使用`src`（资源）属性给元素提供一个图片的地址。
+
+
+{% highlight html %}
+<img src="#" alt="图片的简介">
+{% endhighlight %}
+
+考虑到`<img>`元素是用来展示图片的，所以给他指定一个路径是有必要的。
+
+
+
+
+### 注释
+
+If you write something in your code without disrupting how the browser will display your page, you can write **comments**. They will be _ignored_ by the browser, and are only useful for us humans who write the code.
+
+如果你想写一些不需要浏览器展示的内容，可以写使用**注释**。它会被浏览器忽略，这些内容只对编写、查看代码的人有用。
+
+
+一条注释以`<!--`开始，`-->`结束。
+
+{% highlight html %}
+<!-- 这是一条注释，将会被浏览器忽略 -->
+<p>Hello World!</p>
+{% endhighlight %}
+
+
+<div class="result"><p>Hello World!</p></div>
+
+### 自闭合标签
+
+有些HTML元素只有开始标签：
 
 {% highlight html %}
 <br> <!-- line-break -->
@@ -105,3 +118,5 @@ Some HTML elements only have an opening tag:
 {% endhighlight %}
 
 Because they don't have a closing tag and consequently can't contain anything _inside_ them, self-enclosing elements usually carry a few attributes, to provide them with additional information.
+
+因为自闭合标签没有闭合标签，所以它没有不能包含其他文档内容，只能通过一些属性来设置额外的信息。
