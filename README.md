@@ -19,7 +19,7 @@
     * browser.md - @xiaowang - 状态(翻译中)
     * HTML Basic - @fanmingfei - 状态(完成)
     * HTML Syntax - @fanmingfei - 状态(完成)
-    * HTML "HTML Block and Inline - @fanmingfei - 状态(完成)
+    * HTML HTML Block and Inline - @fanmingfei - 状态(完成)
 
 ## License
 
