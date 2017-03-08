@@ -92,8 +92,6 @@ HTML 有一套相对于其它语言更简单的规则，HTML通过**边界**来�
 
 ### 注释
 
-If you write something in your code without disrupting how the browser will display your page, you can write **comments**. They will be _ignored_ by the browser, and are only useful for us humans who write the code.
-
 如果你想写一些不需要浏览器展示的内容，可以写使用**注释**。它会被浏览器忽略，这些内容只对编写、查看代码的人有用。
 
 
@@ -116,7 +114,5 @@ If you write something in your code without disrupting how the browser will disp
 <img src="http://placehold.it/50x50" alt="Description"> <!-- image -->
 <input type="text"> <!-- text input -->
 {% endhighlight %}
-
-Because they don't have a closing tag and consequently can't contain anything _inside_ them, self-enclosing elements usually carry a few attributes, to provide them with additional information.
 
 因为自闭合标签没有闭合标签，所以它没有不能包含其他文档内容，只能通过一些属性来设置额外的信息。
