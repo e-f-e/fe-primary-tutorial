@@ -22,7 +22,7 @@ HTML 有一套相对于其它语言更简单的规则，HTML通过**边界**来�
 
 <div class="result"><p>这是一个段落，一般我们将段落写在p标签内。</p></div>
 
-上面的尖括号`<`{:.language-html} and `>`{:.language-html} 就是HTML标签，它定义网页内一些内容的开始和结束。
+上面的尖括号`<`{:.language-html} 和 `>`{:.language-html} 就是HTML标签，它定义网页内一些内容的开始和结束。
 
 每一个标签都有明确的**意义**，比如说上面这个例子`p`{:.language-html}代表着 **段落**。
 
