@@ -34,8 +34,6 @@ section: html
 
 
 
-### Opening and closing tags
-
 ### 开始和闭合标签
 
 **所有** 块级元素都有开始和闭合标签
