@@ -23,6 +23,7 @@
     * HTML Block and Inline - @fanmingfei - 完成
     * HTML Hierarchy - @fanmingfei - 翻译中
     * HTML Semantics - @liuchunhui - 翻译中
+    * HTML Formatting - @melanc - 翻译中
 
 ## License
 
