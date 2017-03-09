@@ -5,49 +5,52 @@ subtitle: "HTML has 2 main <strong>types</strong> of elements"
 section: html
 ---
 
-In HTML, you'll mainly come across 2 types of HTML elements:
 
-* **block** elements like:
 
-    * paragraphs `<p>`
-    * lists: unordered (with bullet points) `<ul>` or ordered lists (with numbers) `<ol>`
-    * headings: from 1st level `<h1>` to 6th level headings `<h6>`
-    * articles `<article>`
-    * sections `<section>`
-    * long quotes `<blockquote>`
+在HTML中，主要有两种HTML元素。
 
-* **inline** elements like:
+* **块级** 元素：
 
-    * links `<a>`
-    * emphasised words `<em>`
-    * important words `<strong>`
-    * short quotes `<q>`
-    * abbreviations `<abbr>`
+    * 段落： `<p>`
+    * 列表： 有序列表 `<ul>`、无序列表`<ol>`
+    * 标题：`<h1>` 到 `<h6>`
 
-**Block** elements are meant to **structure** the main parts of your page, by dividing your content in _coherent_ blocks.
+* **内联** 元素：
 
-**Inline** elements are meant to differentiate _part_ of a text, to give it a particular function or meaning. Inline elements usually comprise a single or few words.
+    * 像 `<a>`
+    * 强调 `<em>`
+    * 语气更强的强调 `<strong>`
+    * 短的引用 `<q>`
+    * 缩写 `<attr>`
 
+
+**块级** 元素可以通过将你的页面内容清晰的划分为多个部分。
+
+**内联** 元素用来指定页面中有特殊意义的词语，给予词语一定的意义和功能，一般内联元素只用来包括一个或几个词语。
 
 {% highlight html %}
-<p>Have you seen this <a href="http://www.youtube.com">amazing video</a> on YouTube?</p>
+<p>你有没有在知乎上订阅 <a href="https://zhuanlan.zhihu.com/future-fe">挨踢路透社</a> 的专栏?</p>
 {% endhighlight %}
+
+
 
 ### Opening and closing tags
 
-**All** block-level elements have an opening and closing tags.
+### 开始和闭合标签
 
-As a result, self-enclosing elements are **inline** elements, simply because their syntax don't allow them to contain any other HTML element.
+**所有** 块级元素都有开始和闭合标签
+
+因此，自闭和元素是行内元素，仅仅是因为他们的语法不允许他们包含其他的HTML元素。
 
 <div class="table">
   <table>
     <tr>
       <th class="empty"></th>
-      <th>Have opening and closing tags</th>
-      <th>Self-enclosing</th>
+      <th>有开始和闭合标签</th>
+      <th>自闭和元素</th>
     </tr>
     <tr>
-      <th>Block elements</th>
+      <th>块级元素</th>
       <td>
         <code>&lt;p&gt;</code>
         <code>&lt;/p&gt;</code>
@@ -59,11 +62,11 @@ As a result, self-enclosing elements are **inline** elements, simply because the
         <code>&lt;/ol&gt;</code>
       </td>
       <td>
-        <strong>Impossible</strong>
+        <strong>木有</strong>
       </td>
     </tr>
     <tr>
-      <th>Inline elements</th>
+      <th>内联元素</th>
       <td>
         <code>&lt;a&gt;</code>
         <code>&lt;/a&gt;</code>
@@ -85,9 +88,12 @@ As a result, self-enclosing elements are **inline** elements, simply because the
   </table>
 </div>
 
-### Other types of HTML elements
 
-There are several exceptions to the block/inline elements, but the ones you will most often encounter are:
+### 其他类型的HTML元素
 
-* **list items** for the `<li>`
-* **table**, **table rows**, **table cells** for `<table>`, `<tr>` and `<td>` respectively
+
+这里有几个特殊的元素，虽然比较特殊但你会经常遇到它们：
+
+
+* **列表项**  `<li>`
+* **表格**, **表格行**, **表格列** 分别是 `<table>`, `<tr>` 和 `<td>`
