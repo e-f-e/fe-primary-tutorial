@@ -9,7 +9,7 @@ section: html
 
 _“超文本”_ 是网页的一部分，定义了我们使用链接的方式： _超文本_ 链接, 又称为 **超链接**。
 
-在网页中， 链接是 **内联元素** 写做 `<a>` 标签。
+在网页中， 链接是 **内联元素** ，写做 `<a>` 标签。
 
 `href` 属性（超文本引用）用于定义链接的 **目标** （跳转到你点击的地址）。
 
@@ -25,27 +25,27 @@ _“超文本”_ 是网页的一部分，定义了我们使用链接的方式�
   </p>
 </div>
 
-Links are the **primary** interaction of a webpage: you navigate from one document to another by clicking on links.
+链接是 **主要的** 页面交互：你从一个网页浏览到另一个网页，通过点击链接完成跳转。
 
-There are **3** types of target you can define.
+有 **3** 种类型的跳转目标可以定义。
 
-* **anchor** targets, to navigate within the _same page_
-* **relative** URLs, usually to navigate within the _same website_
-* **absolute** URLs, usually to navigate to _another_ website
+* **锚点** 目标, 用于浏览 _同一个页面_ 的内容
+* **相对的** 网址，通常用于浏览 _同一网站_ 内的内容
+* **绝对的** 网址, 通常用于浏览 _另一个_ 网站
 
-### Anchor targets
+### 锚点 目标
 
-**Anchor** target to navigate _within_ the **same** page. By prepending your href with `#`, you can target an HTML element with a specific `id` attribute.
+**锚点** 目标用于浏览 **同一** 页面 _以内_ 的内容。通过在你的超链接中加入`#`前缀，你可以跳转到一个使用`id`定义的网页元素。
 
-For example, `<a href="#footer">` will navigate to the `<div id="footer">` within the same HTML document. This type of href is often used to navigate back to the top of the page.
+例如，`<a href="#footer">` 将要跳转到当前页面内的`<div id="footer">`元素。这种类型的超链接通常用于跳转到页面的顶部。
 
-### Relative URLs
+### 相对的 网址
 
-If you want to define a link to another page of the _same_ website, you can use **relative** URLs.
+如果你想要定义一个跳转到 _同一_ 网站内其它页面的链接，你可以使用 **相对的** 网址。
 
-But relative to what? Well, relative to the **current page**.
+但是相对于是什么呢？相对于 **当前的页面**。
 
-Let's use a simple example where the folder `my-first-website` contains 2 HTML files:
+让我们使用一个简单的示例，`我的第一个网站`目录下包含2个网页：
 
 <ul class="files">
   <li>
