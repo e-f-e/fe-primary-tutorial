@@ -5,17 +5,17 @@ subtitle: "The <strong>core</strong> of the Web"
 section: html
 ---
 
-**Links** are essential in HTML, as the Web was initially designed to be an information network of documents **linked** between each other.
+**链接** 是网页中必不可少的, 当网站一开始被设计用作文档信息网络时，**链接** 无处不在。
 
-The _"HyperText"_ part of HTML defines what kind of links we use: _hypertext_ links, a.k.a **hyperlinks**.
+_“超文本”_ 是网页的一部分，定义了我们使用链接的方式： _超文本_ 链接, 又称为 **超链接**。
 
-In HTML, links are **inline elements** written with the `<a>` tag.
+在网页中， 链接是 **内联元素** 写做 `<a>` 标签。
 
-The `href` attribute (hypertext reference) is used to define the **target** of the link (where you navigate to when you click).
+`href` 属性（超文本引用）用于定义链接的 **目标** （跳转到你点击的地址）。
 
 {% highlight html %}
 <p>
-  To search for something, visit <a href="http://www.google.com">Google</a>.
+  如果你想要搜索某个东西，请访问谷歌 <a href="http://www.google.com">Google</a>.
 </p>
 {% endhighlight %}
 
