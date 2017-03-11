@@ -5,11 +5,11 @@ subtitle: "The <strong>core</strong> of the Web"
 section: html
 ---
 
-**链接** 是网页中必不可少的, 当网站一开始被设计用作文档信息网络时，**链接** 无处不在。
+**链接**是HTML中必不可少的, 当网站一开始被设计用作文档信息网络时，**链接**无处不在。
 
-_“超文本”_ 是网页的一部分，定义了我们使用链接的方式： _超文本_ 链接, 又称为 **超链接**。
+_“超文本”_是HTML的一部分，定义了我们使用链接的方式：_超文本_链接，又称为**超链接**。
 
-在网页中， 链接是 **内联元素** ，写做 `<a>` 标签。
+在HTML中，链接是**内联元素**，写做`<a>`标签。
 
 `href` 属性（超文本引用）用于定义链接的 **目标** （跳转到你点击的地址）。
 
@@ -115,30 +115,30 @@ _“超文本”_ 是网页的一部分，定义了我们使用链接的方式�
 
 ### 绝对的地址
 
-如果你想要和朋友分享你的猫的相册，你不能只发送`gallery.html`页面，因为这类**相对的**地址只能工作在同一**电脑**或者同一**域名**下的网页文档。If you wanted to share your cats gallery with a friend, you wouldn't be able to just send `gallery.html`, as this **relative** URL only works for HTML documents that are on the same **computer** or same **domain**.
+如果你想要和朋友分享你的猫的相册，你不能只发送`gallery.html`页面，因为这类**相对的**地址只能服务于同一**电脑**或者同一**域名**下的网页文档。
 
-You need the _complete_ URL to your HTML document: `http://ireallylovecats.com/gallery.html`.
+你的HTML文档需要_完整的_地址：`http://ireallylovecats.com/gallery.html`。
 
-This URL can be segmented in 3 parts:
+这个URL可以被分为3段：
 
-* **protocol** `http://`
-* **domain** `ireallylovecats.com`
-* **file path** `gallery.html`
+* **协议** `http://`
+* **域名** `ireallylovecats.com`
+* **文件路径** `gallery.html`
 
-This **absolute URL** is **self-sufficient**: no matter where you use the link form, it contains _all_ the information required to find the correct file, on the correct domain, with the correct protocol.
+**绝对的URL**是**自适应的**：无论你使用什么连接表单，在正确的域名和协议下，它包含找到正确文件的_全部的_必要信息。
 
-You usually use absolute URLs defining a link from _your_ website to _another_ website.
+你通常使用绝对的URLs定义_你的_网站到_其他的_网站。
 
-In your `http://ireallylovecats.com/gallery.html` file, you could write:
+在你的`http://ireallylovecats.com/gallery.html`文件中，你可以这样写：
 
 {% highlight html %}
 <p>
-  Find more images of my cats on my <a href="https://twitter.com/ireallylovecats">Twitter account</a>!
+  找到更多关于猫的图片<a href="https://twitter.com/ireallylovecats">Twitter账户</a>!
 </p>
 {% endhighlight %}
 
-### Relative or absolute links?
+### 使用相对的还是绝对的链接？
 
-Let's say you want to link from the first to the second. The most direct approach is to use the absolute URL. So you add `<a href="http://ireallylovecats.com/gallery.html">Go the second page</a>` in your `index.html` file.
+假设你想要从第一个链接第二个，最直接的方法是使用绝对的URL。因此你可以在你的`index.html`文件中添加`<a href="http://ireallylovecats.com/gallery.html">跳转到第二个页面</a>`。
 
-Because the two files are in the same directory, you could use the **relative** URL by using `<a href="first-blog-post.html">`. This is useful if you decide to move your directory: your links won't be broken because the link targets are relative to each other, as long as you move both files simultaneously and keep them in the same directory. This relative approach is particularly useful when switching domains.
+如果两个文件在同一个目录下，你可以使用**相对的**URL：`<a href="first-blog-post.html">`。这很有用，加入你决定移动你的目录：你的链接不会受到破坏，因为链接的目标相对位置没有变，只要你同时移动所有的文件并且保持它们都在同一个目录下。这种相对的方法在切换域名时特别有用。
