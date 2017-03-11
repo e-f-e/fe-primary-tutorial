@@ -70,7 +70,7 @@ _“超文本”_是HTML的一部分，定义了我们使用链接的方式：_�
 
 {% highlight html %}
 <p>
-  跳转到<a href="contact.html">联系人页面</a>.
+  跳转到 <a href="contact.html">联系人页面</a>.
 </p>
 {% endhighlight %}
 
@@ -105,13 +105,11 @@ _“超文本”_是HTML的一部分，定义了我们使用链接的方式：_�
 
 {% highlight html %}
 <p>
-  请访问<a href="gallery.html">Gallery</a>!
+  请访问 <a href="gallery.html">Gallery</a>!
 </p>
 {% endhighlight %}
 
 记住：网站就存在于我们通常使用的**电脑**中。它们被称为**“服务器”**，因为它们唯一的目的是用作网站主机。但是它们像“常规的”电脑一样仍然有**文件**和**文件夹**。
-
-{: .info}
 
 ### 绝对的URL
 
@@ -133,7 +131,7 @@ _“超文本”_是HTML的一部分，定义了我们使用链接的方式：_�
 
 {% highlight html %}
 <p>
-  找到更多关于猫的图片<a href="https://twitter.com/ireallylovecats">Twitter账户</a>!
+  找到更多关于猫的图片 <a href="https://twitter.com/ireallylovecats">Twitter账户</a>!
 </p>
 {% endhighlight %}
 
