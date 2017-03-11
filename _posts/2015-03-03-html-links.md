@@ -21,7 +21,7 @@ _“超文本”_ 是网页的一部分，定义了我们使用链接的方式�
 
 <div class="result">
   <p>
-    To search for something, visit <a href="http://www.google.com">Google</a>.
+    如果你想要搜索某个东西，请访问谷歌 <a href="http://www.google.com">Google</a>.
   </p>
 </div>
 
@@ -33,19 +33,19 @@ _“超文本”_ 是网页的一部分，定义了我们使用链接的方式�
 * **相对的** 网址，通常用于浏览 _同一网站_ 内的内容
 * **绝对的** 网址, 通常用于浏览 _另一个_ 网站
 
-### 锚点 目标
+### 锚点目标
 
 **锚点** 目标用于浏览 **同一** 页面 _以内_ 的内容。通过在你的超链接中加入`#`前缀，你可以跳转到一个使用`id`定义的网页元素。
 
 例如，`<a href="#footer">` 将要跳转到当前页面内的`<div id="footer">`元素。这种类型的超链接通常用于跳转到页面的顶部。
 
-### 相对的 网址
+### 相对的网址
 
 如果你想要定义一个跳转到 _同一_ 网站内其它页面的链接，你可以使用 **相对的** 网址。
 
 但是相对于是什么呢？相对于 **当前的页面**。
 
-让我们使用一个简单的示例，`我的第一个网站`目录下包含2个网页：
+让我们使用一个简单的示例，`my-first-website`目录下包含2个网页：
 
 <ul class="files">
   <li>
@@ -64,25 +64,25 @@ _“超文本”_ 是网页的一部分，定义了我们使用链接的方式�
   </li>
 </ul>
 
-In `home.html`, you want to define a link to `contact.html`.
+在 `home.html` 页面，你可以定义一个链接指向 `contact.html`。
 
-As the two files are **in the same folder**, you can simply write in `home.html`:
+当这两个页面 **在同一个文件夹内**，你可以简单的写成 `home.html`：
 
 {% highlight html %}
 <p>
-  Go to the <a href="contact.html">contact page</a>.
+  跳转到 <a href="contact.html">联系人页面</a>.
 </p>
 {% endhighlight %}
 
 <div class="result">
   <p>
-    Go to the <a href="contact.html">contact page</a>.
+    跳转到 <a href="contact.html">联系人页面</a>.
   </p>
 </div>
 
-On an actual website, the process is similar.
+在现实的网站中，过程是相似的。
 
-Let's say you have a website called `http://ireallylovecats.com` on which you have 2 webpages: `index.html` and `gallery.html`:
+假如你有一个网站叫`http://ireallylovecats.com`，其中有两个页面：`index.html`和`gallery.html`：
 
 <ul class="files">
   <li>
@@ -101,20 +101,21 @@ Let's say you have a website called `http://ireallylovecats.com` on which you ha
   </li>
 </ul>
 
-In `index.html` you could write the following link:
+在 `index.html` 页面你可以编写如下链接：
 
 {% highlight html %}
 <p>
-  Visit the <a href="gallery.html">Gallery</a>!
+  请访问 <a href="gallery.html">Gallery</a>!
 </p>
 {% endhighlight %}
 
-Remember: websites are hosted on **computers** just like the one you're currently using. They are simply called **"servers"** because their sole purpose is to host websites. But they still have **files** and **folders** like "regular" computers.
+记住：网站就存在于如我们正在使用的**电脑**中。它们被称为**“服务器”**，因为它们唯一的目的用于网站主机。但是它们像“通常的”电脑一样仍然有**文件**和**文件夹**。
+
 {: .info}
 
-### Absolute URLs
+### 绝对的地址
 
-If you wanted to share your cats gallery with a friend, you wouldn't be able to just send `gallery.html`, as this **relative** URL only works for HTML documents that are on the same **computer** or same **domain**.
+如果你想要和朋友分享你的猫的相册，你不能只发送`gallery.html`页面，因为这类**相对的**地址只能工作在同一**电脑**或者同一**域名**下的网页文档。If you wanted to share your cats gallery with a friend, you wouldn't be able to just send `gallery.html`, as this **relative** URL only works for HTML documents that are on the same **computer** or same **domain**.
 
 You need the _complete_ URL to your HTML document: `http://ireallylovecats.com/gallery.html`.
 
