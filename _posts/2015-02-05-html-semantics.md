@@ -54,29 +54,29 @@ HTML标签的作用是向文档传递一种 **含义** 。不必太在意你的�
 
 {% highlight html %}
 <article>
-  <h1>Main title of the page</h1>
-  <h2>A subtitle</h2>
+  <h1>主标题</h1>
+  <h2>副标题</h2>
   <p>
-    Something something an other stuff and some <em>emphasis</em> and even <strong>important</strong> words.
+    一些其他的内容，或 <em>着重强调</em>, 或<strong>重点</strong>单词。
   </p>
   <p>
-    Another paragraph.
+    其他段落
   </p>
   <ul>
-    <li>One</li>
-    <li>Two</li>
-    <li>Three</li>
+    <li>一</li>
+    <li>二</li>
+    <li>三</li>
   </ul>
   <blockquote>
-    Once said
+    曾经沧海难为水，除却巫山不是云。
   </blockquote>
 </article>
 <aside>
-  <h3>My latest posts</h3>
+  <h3>我的最新帖子</h3>
   <ul>
-    <li><a href="#">One</a></li>
-    <li><a href="#">One</a></li>
-    <li><a href="#">One</a></li>
+    <li><a href="#">一</a></li>
+    <li><a href="#">二</a></li>
+    <li><a href="#">三</a></li>
   </ul>
 </aside>
 {% endhighlight %}
