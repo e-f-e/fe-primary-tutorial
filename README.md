@@ -26,7 +26,6 @@
     * HTML Formatting - @fanmingfei - 完成
     * HTML Links - @melanc - 翻译中
 
-
 ## License
 
 * MIT
