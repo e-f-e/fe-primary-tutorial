@@ -13,6 +13,7 @@
 * 提交 PR
 
 ## 翻译认领（`/posts`目录）
+
     * introduction.md - @yangxiaofu - 翻译中
     * internet.md - @yangxiaofu - 翻译中
     * web.md - @yangxiaofu - 翻译中
@@ -20,11 +21,11 @@
     * HTML Basic - @fanmingfei - 完成
     * HTML Syntax - @fanmingfei - 完成
     * HTML Block and Inline - @fanmingfei - 完成
-    * HTML Hierarchy - @fanmingfei - 翻译中
-    * HTML Semantics - @liuchunhui - 翻译中  
-    
-    
-  
+    * HTML Hierarchy - @fanmingfei - 完成
+    * HTML Semantics - @liuchunhui - 翻译中
+    * HTML Formatting - @fanmingfei - 完成
+    * HTML Links - @melanc - 翻译中
+
 ## License
 
 * MIT

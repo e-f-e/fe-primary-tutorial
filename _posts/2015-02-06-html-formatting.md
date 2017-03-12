@@ -1,25 +1,25 @@
 ---
 layout: post
-title: "HTML <strong>Formatting</strong>"
+title: "HTML <strong>格式</strong>"
 subtitle: "When <strong>whitespace</strong> doesn't matter"
 section: html
 ---
 
-There is a difference between what is **written** in your HTML code, and what is **displayed** in the browser.
+人类**书写**出来的HTML代码和浏览器**展现**出来的样子是完全不同的。
 
-As we've already seen, HTML **tags** like `<p>` are only _read_ by the browser (to know what _kind_ of content is written), but are **not displayed** by the browser.
+通过以前的文章我们已经知道，像HTML**标签**仅仅被浏览器所**阅读**（用来知道你的内容属于什么类型），但是不会被**展示**到页面上。
 
-We've also seen how it's possible to write HTML **comments** in your code, to help the human reading the code, without having these comments being displayed by the browser.
+我们也知道，我们可以在我们的代码中写一些**注释**来帮助其他人读懂代码。但这些注释都不会被浏览器展示到页面上。
 
-Another kind of written code _ignored_ by the browser is **whitespace**, which includes:
+还有一些其他的内容也是会被浏览器_忽略_的：
 
-* line-breaks
-* empty lines
-* tabulations (or indentation)
+* 换行符
+* 空行
+* 制表符（或多个空格）
 
-### Line-breaks
+### 换行
 
-Line-breaks and empty lines (which are a succession of line-breaks) in HTML code are **ignored** by the browser. They only account for a **single** space.
+在HTML代码中，换行和空行（由多个换行形成的空行）都会被浏览器所**忽略**。他们只会被视作**一个**空格。
 
 {% highlight html %}
 <blockquote>
@@ -39,7 +39,7 @@ where you can communicate through sharing information.
   </blockquote>
 </div>
 
-In order to actually **force** a line-break, you need to use the `<br>` HTML element:
+如果你想在文档中**强制**添加一个换行，你需要使用`<br>` HTML 元素：
 
 {% highlight html %}
 <p>At its best, life is completely<br>unpredictable.</p>
@@ -49,11 +49,11 @@ In order to actually **force** a line-break, you need to use the `<br>` HTML ele
   <p>At its best, life is completely<br>unpredictable.</p>
 </div>
 
-### Tabulations
+### 制表符
 
-A **tabulation** is a special character obtained by pressing the _"Tab"_ key. It usually moves the cursor to the next tab stop, but sometimes is converted to 2 spaces.
+制表符是通过_"Tab"_键输入的特殊的字符。它通常让光标置于下一个制表位，但是有时候它被转成两个空格。
 
-Anyway, like a regular space, a tabulation is **invisible**. It's also ignored by the browser:
+Anyway，像连续的空格或者制表符在网页中都是**不可见**的，他们会被浏览器所忽略：
 
 {% highlight html %}
 <p>
@@ -62,41 +62,36 @@ Anyway, like a regular space, a tabulation is **invisible**. It's also ignored b
 </p>
 {% endhighlight %}
 
-<div class="result">
-  <p>
-    Let's push      this text
-    with tabulations.
-  </p>
-</div>
+如果你想在文字前面添加空格，你可能要用到CSS，那么想你需要在下一章学习啦。
 
-If you want to add space _before_ a word, you'll have to use CSS, which we'll cover in the next chapter.
-
-If you want to **close** an HTML element, you first have to close all its _children_ elements.
+如果你想**闭合**一个元素，首先你要闭合它的子元素。
 {: .info}
 
-### Tree format
 
-As HTML elements can be nested within each other, you have to keep track of the **order** in which they have been opened, as it will affect the order in which they are closed.
+### 嵌套格式
+
+HTML代码是相互嵌套的，你必须在书写代码的时候保持嵌套规则。
+
 
 {% highlight html %}
-<article><p>This code is written on a <strong>single</strong> line.</p></article>
+<article><p>这段代码是写在<strong>一行</strong>里的。</p></article>
 {% endhighlight %}
 
 <div class="result">
-  <article><p>This code is written on a <strong>single</strong> line.</p></article>
+  <article><p>这段代码是写在 <strong>一行</strong> 里的。</p></article>
 </div>
 
-As it can be hard to keep track of the order in which HTML elements have been opened, it is recommended to write HTML in a **tree format**:
+像上面这样，如果把代码写在一行，嵌套元素比较多的话，很难记得开始标签和结束标签的位置，容易影响标签的闭合位置，导致页面错乱。。
 
 {% highlight html %}
 <article>
   <p>
-    This code is written on
-    <strong>multiple</strong>
-    lines but will nevertheless
-    be displayed on a
-    <em>single</em>
-    one.
+    这段代码写了
+    <strong>多行</strong>
+    但是它
+    被显示在
+    <em>一行</em>
+    里
   </p>
 </article>
 {% endhighlight %}
@@ -104,30 +99,36 @@ As it can be hard to keep track of the order in which HTML elements have been op
 <div class="result">
   <article>
     <p>
-      This code is written on
-      <strong>multiple</strong>
-      lines but will nevertheless
-      be displayed on a
-      <em>single</em>
-      one.
+      这段代码写了
+      <strong>多行</strong>
+      但是它
+      被显示在
+      <em>一行</em>
+      里
     </p>
   </article>
 </div>
 
-The tree format allows to _visually_ replicate the **nesting levels** of your HTML code. It's thus easy to see that:
 
-* `<article>` is the **ancestor**
-* `<p>` is the **parent** of `<strong>` and `<em>`
-* `<strong>` and `<em>` are **siblings**
+这种嵌套格式在HTML代码中被很清晰的展现出来，并且能明显展示出元素之间的关系：
 
-### Write HTML for you to read
+* `<article>` 是**祖先元素**
+* `<p>` 是 `<strong>`和`<em>`的**父元素**
+* `<strong>`和`<em>` 是 **兄弟元素**
 
-Tabulations, empty lines, successive spaces, and line-breaks, are dismissed by the computer, and are all converted into a **single space**.
 
-An HTML document is both written and read by a human, but only _read_ by a computer. Considering tabulations, spaces and line-breaks don't affect the way a browser will read and subsequently _display_ your webpage, you may as well format your document in the most readable way for **you**.
+### 代码是写给人看的，只是机器偶尔读一读
 
-There aren't specific rules concerning HTML formatting, but there are implicit **conventions**, specifically:
+制表符，空行，连续的空格，换行符都会被机器所忽略，而且都会被一个空格替代。
 
-* use **tabulations** to help visualize how HTML elements are **nested**
-* put opening and closing tags of block-level elements on their **own line**
-* write inline elements on one line (including opening and closing tags)
+
+代码是写给人看的，只是机器偶尔读一读。制表符，空行，连续的空格，换行符不会影响浏览器解析和展示，你需要把你的HTML文档写的更加可读。
+
+
+HTML没有特殊的格式规则，但是这里有一些潜规则，
+
+
+* 使用制表符来更好的展示元素的**嵌套**
+* 把块级元素的开始和闭合标签分别写在一行
+* 把內联元素单独写在一行（包括开始和闭合标签）
+

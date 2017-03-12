@@ -5,47 +5,47 @@ subtitle: "The <strong>core</strong> of the Web"
 section: html
 ---
 
-**Links** are essential in HTML, as the Web was initially designed to be an information network of documents **linked** between each other.
+**链接**是HTML中必不可少的, 当网站一开始被设计用作文档信息网络时，**链接**无处不在。
 
-The _"HyperText"_ part of HTML defines what kind of links we use: _hypertext_ links, a.k.a **hyperlinks**.
+_“超文本”_是HTML的一部分，定义了我们使用链接的方式：_超文本_链接，又称为**超链接**。
 
-In HTML, links are **inline elements** written with the `<a>` tag.
+在HTML中，链接是**内联元素**，写做`<a>`标签。
 
-The `href` attribute (hypertext reference) is used to define the **target** of the link (where you navigate to when you click).
+`href` 属性（超文本引用）用于定义链接的 **目标** （跳转到你点击的地址）。
 
 {% highlight html %}
 <p>
-  To search for something, visit <a href="http://www.google.com">Google</a>.
+  如果你想要搜索某个东西，请访问谷歌 <a href="http://www.google.com">Google</a>.
 </p>
 {% endhighlight %}
 
 <div class="result">
   <p>
-    To search for something, visit <a href="http://www.google.com">Google</a>.
+    如果你想要搜索某个东西，请访问谷歌 <a href="http://www.google.com">Google</a>.
   </p>
 </div>
 
-Links are the **primary** interaction of a webpage: you navigate from one document to another by clicking on links.
+链接是**主要的**网页交互：通过点击链接实现从一个网页到另一个网页的浏览。
 
-There are **3** types of target you can define.
+有**3**种类型的跳转目标可以定义。
 
-* **anchor** targets, to navigate within the _same page_
-* **relative** URLs, usually to navigate within the _same website_
-* **absolute** URLs, usually to navigate to _another_ website
+* **锚点**目标, 用于浏览_同一个页面_的内容
+* **相对的**URL，通常用于浏览_同一网站_内的内容
+* **绝对的**URL, 通常用于浏览_不同的_网站
 
-### Anchor targets
+### 锚点目标
 
-**Anchor** target to navigate _within_ the **same** page. By prepending your href with `#`, you can target an HTML element with a specific `id` attribute.
+**锚点**目标用于浏览**同一**页面_以内_的内容。通过在你的超链接中加入`#`前缀，你可以跳转到一个使用`id`属性定义的HTML元素。
 
-For example, `<a href="#footer">` will navigate to the `<div id="footer">` within the same HTML document. This type of href is often used to navigate back to the top of the page.
+例如，`<a href="#footer">`将要跳转到当前HTML内的`<div id="footer">`元素。这一类的超链接通常用于跳转到页面的顶部。
 
-### Relative URLs
+### 相对的URL
 
-If you want to define a link to another page of the _same_ website, you can use **relative** URLs.
+如果你想要定义一个跳转到_同一_网站内其它页面的链接，你可以使用**相对的**URL。
 
-But relative to what? Well, relative to the **current page**.
+但是相对于是什么呢？相对于**当前的页面**。
 
-Let's use a simple example where the folder `my-first-website` contains 2 HTML files:
+让我们使用一个简单的示例，`my-first-website`目录下包含2个HTML文件：
 
 <ul class="files">
   <li>
@@ -64,25 +64,25 @@ Let's use a simple example where the folder `my-first-website` contains 2 HTML f
   </li>
 </ul>
 
-In `home.html`, you want to define a link to `contact.html`.
+在`home.html`中，你可以定义一个链接指向`contact.html`。
 
-As the two files are **in the same folder**, you can simply write in `home.html`:
+当这两个文件**在同一个文件夹内**，你可以简单的写成`home.html`：
 
 {% highlight html %}
 <p>
-  Go to the <a href="contact.html">contact page</a>.
+  跳转到 <a href="contact.html">联系人页面</a>.
 </p>
 {% endhighlight %}
 
 <div class="result">
   <p>
-    Go to the <a href="contact.html">contact page</a>.
+    跳转到 <a href="contact.html">联系人页面</a>.
   </p>
 </div>
 
-On an actual website, the process is similar.
+在一个实际的网站中，这个过程是相似的。
 
-Let's say you have a website called `http://ireallylovecats.com` on which you have 2 webpages: `index.html` and `gallery.html`:
+假如你有一个网站叫`http://ireallylovecats.com`，其中有两个页面：`index.html`和`gallery.html`：
 
 <ul class="files">
   <li>
@@ -101,43 +101,42 @@ Let's say you have a website called `http://ireallylovecats.com` on which you ha
   </li>
 </ul>
 
-In `index.html` you could write the following link:
+在`index.html`页面你可以写入如下链接：
 
 {% highlight html %}
 <p>
-  Visit the <a href="gallery.html">Gallery</a>!
+  请访问 <a href="gallery.html">Gallery</a>!
 </p>
 {% endhighlight %}
 
-Remember: websites are hosted on **computers** just like the one you're currently using. They are simply called **"servers"** because their sole purpose is to host websites. But they still have **files** and **folders** like "regular" computers.
-{: .info}
+记住：网站就存在于我们通常使用的**电脑**中。它们被称为**“服务器”**，因为它们唯一的目的是用作网站主机。但是它们像“常规的”电脑一样仍然有**文件**和**文件夹**。
 
-### Absolute URLs
+### 绝对的URL
 
-If you wanted to share your cats gallery with a friend, you wouldn't be able to just send `gallery.html`, as this **relative** URL only works for HTML documents that are on the same **computer** or same **domain**.
+如果你想要和朋友分享你的猫相册，你不能只发送`gallery.html`页面给他，因为这类**相对的**地址只能服务同一**电脑**或者同一**域名**下的HTML文档。
 
-You need the _complete_ URL to your HTML document: `http://ireallylovecats.com/gallery.html`.
+你的HTML文档需要_完整的_URL：`http://ireallylovecats.com/gallery.html`。
 
-This URL can be segmented in 3 parts:
+这个URL可以被分为3部分：
 
-* **protocol** `http://`
-* **domain** `ireallylovecats.com`
-* **file path** `gallery.html`
+* **协议** `http://`
+* **域名** `ireallylovecats.com`
+* **文件路径** `gallery.html`
 
-This **absolute URL** is **self-sufficient**: no matter where you use the link form, it contains _all_ the information required to find the correct file, on the correct domain, with the correct protocol.
+**绝对的URL**是**无依赖的**：无论你在哪里使用链接，它都能在正确的域名和协议下找到正确的文件，因为它包含_全部的_必要信息。
 
-You usually use absolute URLs defining a link from _your_ website to _another_ website.
+你通常使用绝对的URL定义一个从_你的_网站到_另一个_网站的链接。
 
-In your `http://ireallylovecats.com/gallery.html` file, you could write:
+在你的`http://ireallylovecats.com/gallery.html`文件中，你可以这样写：
 
 {% highlight html %}
 <p>
-  Find more images of my cats on my <a href="https://twitter.com/ireallylovecats">Twitter account</a>!
+  找到更多关于猫的图片 <a href="https://twitter.com/ireallylovecats">Twitter账户</a>!
 </p>
 {% endhighlight %}
 
-### Relative or absolute links?
+### 使用相对的还是绝对的链接？
 
-Let's say you want to link from the first to the second. The most direct approach is to use the absolute URL. So you add `<a href="http://ireallylovecats.com/gallery.html">Go the second page</a>` in your `index.html` file.
+假设你想要从第一个目标链接到第二个目标，最直接的方法是使用绝对的URL。因此你可以在你的`index.html`文件中添加：`<a href="http://ireallylovecats.com/gallery.html">跳转到第二个页面</a>`。
 
-Because the two files are in the same directory, you could use the **relative** URL by using `<a href="first-blog-post.html">`. This is useful if you decide to move your directory: your links won't be broken because the link targets are relative to each other, as long as you move both files simultaneously and keep them in the same directory. This relative approach is particularly useful when switching domains.
+如果两个文件在同一个目录下，你可以使用**相对的**URL：`<a href="first-blog-post.html">`。这很有用，假如你决定移动你的目录：这样你的链接不会受到破坏，因为链接目标相对位置没有变，只要你同时移动所有的文件并且保持它们都在同一个目录下。这种相对的方式在切换域名时特别有用。
