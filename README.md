@@ -9,7 +9,6 @@
 * fork
 * clone 到本地
 * update readme, 添加认领标识
-* 新建副本保存，以便校正（如想翻译`2015-01-01-introduction.md`文章，则在`original`目录建立`2015-01-01-introduction.md`副本，以便于校对b，同时该文件也不会被渲染
 * 提交 PR
 
 ## 翻译认领（`/posts`目录）
