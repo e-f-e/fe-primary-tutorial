@@ -1,91 +1,100 @@
 ---
 layout: post
-title: "<strong>Inline</strong> semantics"
+title: "HTML <strong>内联</strong> 语义"
 subtitle: "The small parts <em>within</em> a block of text"
 section: html
 ---
 
-While paragraphs and lists are meant to identify whole **blocks** of text, we sometimes want to provide meaning to a word (or a few words) _within_ a text.
+
+段落和列表可以给**一块**区域定义，有事我们会给一个词语或几个词语来定义。
 
 ### Strong
 
-For **important** words, use the `<strong>` tag:
+**重要** 的词语, 使用 `<strong>` 标签:
 
 {% highlight html %}
 <p>
-  This is <strong>important</strong> but this is not.
+  这里很 <strong>重要</strong> 这里并没有.
 </p>
 {% endhighlight %}
 
 <div class="result">
   <p>
-    This is <strong>important</strong> but this is not.
+    这里很 <strong>重要</strong> 这里并没有.
   </p>
 </div>
 
-By default, `<strong>` elements are displayed in **bold**, but keep in mind that it is only the browser's default behavior. Don't use `<strong>` _only_ to put some text in bold, but rather to give it more **importance**.
 
-### Emphasis
+通常，`<strong>`元素的字体被展的更**粗**，但是这仅仅是浏览器的默认表现。不要_仅仅_使用`<strong>`来给文字设置粗体，更重要的是让它变的更重要。
 
-For _emphasized_ words, use the `<em>` tag:
+### 强调
+
+强调词语本身, 使用 `<em>` 标签:
 
 {% highlight html %}
 <p>
-  This is <em>emphasized</em> but this is not.
+  这里 <em>着重强调</em> 这里并没有.
 </p>
 {% endhighlight %}
 
 <div class="result">
   <p>
-    This is <em>emphasized</em> but this is not.
+    这里 <em>着重强调</em> 这里并没有.
   </p>
 </div>
 
-By default, `<em>` elements are displayed in _italic_, but keep in mind that it is only the browser's default behavior. Don't use `<em>` _only_ to put some text in italic, but rather to give it _stress emphasis_.
 
-### Abbreviations
+通常，`<em>`元素被展示成_斜体_，但这跟`<strong>`被显示成粗体一样，都只是浏览器的默认表现。我们要使用`<em>`元素来强调文字的重要性。
 
-Abbreviations like W3C or CD can use the `<abbr>` element:
+
+### 缩写
+
+像 W3C 或者 CD 这种缩写都可以用`<abbr>`标签来包含：
 
 {% highlight html %}
 <p>
-  I just bought a <abbr>CD</abbr>.
+  我想买一个 <abbr>CD</abbr>.
 </p>
 {% endhighlight %}
 
-You can add a `title` **attribute** to specify the abbreviation's description, which will appear by hovering the element:
+
+你可以使用`title`属性给缩写的元素一个介绍，当鼠标移入元素一段时间后会显示。
 
 {% highlight html %}
 <p>
-  I just bought a <abbr title="Compact Disc">CD</abbr>.
+ 我想买一个 <abbr title="Compact Disc">CD</abbr>.
 </p>
 {% endhighlight %}
 
 <div class="result">
   <p>
-    I just bought a <abbr title="Compact Disc">CD</abbr>.
+    我想买一个 <abbr title="Compact Disc">CD</abbr>.
   </p>
 </div>
 
 ### Inline quotes
 
-The `<blockquote>` element is a **block-level** element. It has an **inline** version: `<q>`:
+### 行内引用
+
+
+`<blockquote>`元素是**块级引用**，他有一个用于**行内**的版本 `<q>`:
 
 {% highlight html %}
 <p>
-  He said <q>“Hello World”</q> and just left.
+  他刚刚说 <q>“Hello World”</q>.
 </p>
 {% endhighlight %}
 
 <div class="result">
   <p>
-    He said <q>“Hello World”</q> and just left.
+    他刚刚说 <q>“Hello World”</q> .
   </p>
 </div>
 
-### Other inline elements
 
-There are plenty of other [inline semantic elements](https://developer.mozilla.org/en/docs/Web/HTML/Element#Inline_text_semantics) to choose from, but we've covered the most common ones.
+### 其他的内联元素
+
+这里有大量的内联元素可供参考 [inline semantic elements](https://developer.mozilla.org/en/docs/Web/HTML/Element#Inline_text_semantics) 在这里就不多做示例。
 
 *[CD]: Compact Disc
 *[W3C]: World Wide Web Consortium
