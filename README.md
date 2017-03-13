@@ -21,11 +21,11 @@
     * HTML Syntax - @fanmingfei - 完成
     * HTML Block and Inline - @fanmingfei - 完成
     * HTML Hierarchy - @fanmingfei - 完成
-    * HTML Semantics - @liuchunhui - 完成
-    * HTML Formatting - @fanmingfei - 完成
+    * HTML Semantics - @liuchunhui - 完成
+    * HTML Formatting - @fanmingfei - 完成
     * HTML Text - @fanmingfei - 完成
     * HTML Links - @melanc - 翻译中
-    * HTML Images - @liuchunhui 翻译中
+    * HTML Images - @liuchunhui - 翻译中
     
     
 ## License
