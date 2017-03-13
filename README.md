@@ -24,9 +24,11 @@
     * HTML Hierarchy - @fanmingfei - 完成
     * HTML Semantics - @liuchunhui - 翻译中
     * HTML Formatting - @fanmingfei - 完成
+    * HTML Text - @fanmingfei - 完成
     * HTML Links - @melanc - 翻译中
 
 ## License
+
 
 * MIT
 
