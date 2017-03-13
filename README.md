@@ -6,10 +6,10 @@
 
 ## 如何参与翻译
 
-* fork
-* clone 到本地
-* update readme, 添加认领标识
-* 提交 PR
+1. fork
+2. clone 到本地
+3. update readme, 添加认领标识
+4. 提交 PR
 
 ## 翻译认领（`/posts`目录）
 
