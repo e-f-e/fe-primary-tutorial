@@ -72,8 +72,6 @@ section: html
   </p>
 </div>
 
-### Inline quotes
-
 ### 行内引用
 
 
