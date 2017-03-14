@@ -25,8 +25,8 @@
     * HTML Formatting - @fanmingfei - 完成
     * HTML Text - @fanmingfei - 完成
     * HTML Inline Semantics - @fanmingfei - 完成
-    * HTML Links - @melanc - 翻译中
-    * HTML Images - @liuchunhui - 翻译中
+    * HTML Links - @melanc - 完成
+    * HTML Images - @liuchunhui - 翻译中
     
 ## License
 
