@@ -27,7 +27,7 @@
     * HTML Inline Semantics - @fanmingfei - 完成
     * HTML Links - @melanc - 完成
     * HTML Images - @liuchunhui - 翻译中
-    * HTML Tables - @fanmingfei - 翻译中
+    * HTML Tables - @fanmingfei - 完成
     
     
 ## License
