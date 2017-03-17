@@ -1,25 +1,30 @@
 ---
 layout: post
-title: "HTML <strong>Tables</strong>"
+title: "HTML <strong>表格</strong>"
 subtitle: "For <strong>multi-dimensional</strong> data"
 section: html
 ---
 
-HTML **tables** are meant for **tabular data** only, which is any type of content that can be semantically arranged in **rows** and **columns**.
+HTML **表格** 是意义是展示表格数据，仅用来展示可以通过**行**和**列**来展示的内容。
 
 It's like having a **spreadsheet** in Excel.
 
+看起来像Excel电子表格。
+
 ### Syntax
 
-Building a table in HTML requires a **specific structure**:
+### 语法
 
-* open a `<table>`
-* add rows with `<tr>`
-* add _regular_ cells with `<td>` or _heading_ cells with `<th>`
 
-This **hierarchy** is required, and all 3 elements are necessary to build a table.
+在 HTML 创建一个表格需要特殊的结构：
 
-When writing the code, you need to define your table cells from left to right, and _then_ from to bottom.
+* 使用 `<table>`
+* 使用 `<tr>` 添加行
+* 使用 `<td>` 添加_均匀_的列或者标题
+
+创建表格至少要使用这三个元素。
+
+当我们写码的时候，我们需要从左到右，从上到下来定义表格内容。
 
 {% highlight html %}
 <table>
@@ -63,17 +68,23 @@ When writing the code, you need to define your table cells from left to right, a
   </table>
 </div>
 
-As you can see, a table in HTML is relatively **verbose**: there are a lot of tags for just a few rows of data.
 
-### thead, tfoot and tbody
+正如你所看到的，HTML里创建一个表格是比较繁琐的：仅仅创建几行数据就用到了那么多的标签。
 
-Just like a webpage can have a header and a footer, a **table** can have a head, a body, and a foot. As anything in HTML, this is purely for **semantic** reasons: providing more structure to your table.
 
-`<thead>`, `<tfoot>` and `<tbody>` are collections of **rows**. As such, they are _direct_ children of `<table>` and _direct_ parents of one or more `<tr>`. In short, they add **one level of hierarchy**.
+### thead、 tfoot、 tbody
 
-`<thead>` and `<tfoot>` are used as a **summary** of the columns.
 
-Let's enhance the previous table with a head and a body:
+像网页一样，表格也有 header、foot、body，像HTML一样，这些标签都是纯**语义**的：为表格提供更多的结构。
+
+
+`<thead>` `<tfoot>`  `<tbody>`  是由**行**组成，都是`<table>`的子元素，并且它的子元素是一个或多个`<tr>`。简而言之，它们是table下的第一级元素。
+
+
+`<thead>` 和 `<tfoot>` 被用来做每一列的**总览**。
+
+
+让我们使用head和body升级之前的列表。
 
 {% highlight html %}
 <table>
@@ -135,7 +146,9 @@ Let's enhance the previous table with a head and a body:
 
 ### tfoot particularity
 
-Let's also add a foot to the table:
+### tfoot
+
+添加tfoot给表格
 
 {% highlight html %}
 <table>
@@ -207,18 +220,22 @@ Let's also add a foot to the table:
   </table>
 </div>
 
-Although we've added a `<tfoot>` **before** the `<tbody>`, it still appears **at the end**.
 
-It comes from the fact that the `<tbody>` can contain a _lot_ of rows. But the browser wants to render the foot before receiving all of the (potentially numerous) rows of data. That's why the `<tfoot>` is first in the code.
+尽管我们把 `<tfoot>` 添加在 `<tbody>` 之前，它仍然出现在了表格的**最后**。
 
-### colspan and rowspan
 
-You can **merge** columns or rows by using the `rowspan` and `colspan` respectively.
 
-Keep in mind that in order to merge _columns_ you need to use the `rowspan` attribute, as it allows to _span_ a **column** across several _rows_.
+`<tbody>` 可以包含_大量_的数据，但是浏览器想在接收到所有数据之前先渲染foot。这也是为什么我们把`<tfoot>`写在前面的原因。
+
+
+### colspan（跨列） 和 rowspan（跨行）
+
+`colspan` 允许一个单元格跨越多个列，`rowspan` 允许一个单元格跨越多行。
+
+也就是说，如果你想合并列，你需要使用 `rowspan`，它允许一**列**跨越多_行_。
 
 {% highlight html %}
-<table>
+<table border="1">
   <tr>
     <th colspan="2">Michael Jackson Singles</th>
   </tr>
@@ -236,7 +253,7 @@ Keep in mind that in order to merge _columns_ you need to use the `rowspan` attr
 {% endhighlight %}
 
 <div class="result">
-  <table>
+  <table border="1">
     <tr>
       <th colspan="2">Michael Jackson Singles</th>
     </tr>
@@ -253,11 +270,15 @@ Keep in mind that in order to merge _columns_ you need to use the `rowspan` attr
   </table>
 </div>
 
-The "Michael Jackson Singles" cell spans across 2 columns, so the following row includes **two** cells.
 
-Because the cell "1979" spans across 3 rows, the 2 following rows only include a **one** cell, to allow space for the "1979" column.
+"Michael Jackson Singles" 行 跨越两列，所以，它下面的一行包括**两**列。
 
-It can be hard to keep track of how many cells are either missing or superfluous. One easy way to build a complete 2 by 4 table first, and then _remove_ cells while adding `colspan` and `rowspan` attributes.  
-In our case, we are supposed to have **8** cells. We only write **5** cells, but the `colspan="2"` and `rowspan="3"` add **3 additional cells**.
+
+"1979" 跨越了3行，它后面的两行都只有*一个*单元格，并且给"1979"让出了一列。
+
+
+一般来说，我们很难去创建一个不规则的表格，一种简单的方式是：先创建2*4的表格，然后删除表格以后添加 `colspan` 和 `rowspan` 属性。
+
+
+在上面这个例子中，我们认为它有**8**个单元格，我们只写了**5**个，但是 `colspan="2"` 和 `rowspan="3"` 带来了**3个单元格**。
 {: .info}
-

@@ -1,24 +1,28 @@
 ---
 layout: post
-title: "HTML <strong>Structure</strong>"
+title: "HTML <strong>结构</strong>"
 subtitle: "To <strong>organize</strong> the <strong>main</strong> parts of your webpage"
 section: html
 ---
 
-When writing HTML content like paragraphs, lists or links, you provide **meaning** to your _text_. But you might want to **group** some of these elements _together_.
 
-For example, a blog's webpage can be divided in  **4** parts:
+编写HTML代码的时候，经常会写一些段落、列表、链接，一般都是给_文本_赋予一些**含义**。但是怎么才能把分组呢?
 
-* a **header** that is similar on every page, and is the main navigation of the website
-* a **main** content, that changes for every page: a list of articles, a single article with comments, an about page...
-* a **sidebar** that links to monthly archives and categories
-* a **footer** for additional links to less important pages
 
-There are some **structural HTML elements** you can use as **containers** for other elements.
+
+举个例子，一个博客的页面可以被分成四个部分：
+
+* 头部，一个网站的每一个页面可能都会有一个共同的头部，上面有这个网站的导航。
+* 主体部分，每一个页面的主体部分可能不一样，可能是文章列表，也可能是一篇文章和评论，或者一个介绍页面。
+* 侧边，防止一些归档或者栏目供访客选择。
+* 底部，添加一些友情链接、版权以及网站其它不重要的页面。
+
+这里有一些**结构化页面的HTML元素**可供选择，用来当做其它元素的**容器**
+
 
 ### Header
 
-The `header` is usually the **first** HTML element in the code. It acts as an **introduction** to the webpage, with the logo, a tagline, and navigation links.
+`header` 通常是HTML文档中的 **第一个** HTML元素，它的作用是为网站提供一些**介绍**，可能包括Logo、标语、导航链接等。
 
 {% highlight html %}
 <header>
@@ -40,7 +44,8 @@ The `header` is usually the **first** HTML element in the code. It acts as an **
 
 ### Footer
 
-As opposed to the `header`, the `footer` is usually the **last** element of a page, where the main navigation links are repeated and secondary ones added.
+和 `header` 相反， `footer`，通常是**最后一个**元素，这里可能把重要的导航重新展示一次，或者添加一些次要的内容。
+
 
 {% highlight html %}
 <footer>
@@ -69,29 +74,34 @@ As opposed to the `header`, the `footer` is usually the **last** element of a pa
 
 ### Main
 
-The `main` element contains, as its name suggests, the **most important content of the page**, the one that defines the purpose of the page.
+`main`元素，顾名思义，**这个页面中最重要的内容**，这里定义这个页面的主要目的。
 
-While all webpages of a website contain _common_ elements (like the header, the navigation, the footer...), the `main` element focuses on **unique** content.
+所有的页面都包括一些公共的元素（比如 header、nav、footer）,但是`main`元素内的内容在该网站下是**唯一**的。
 
-For example, the article you are currently reading lies within the `main` element of this webpage, because its content is unique throughout the whole MarkSheet website.
+例如，你现在阅读的内容呈现在`main`元素内，这个内容在这个网站是独一无二的。
 
 ### Aside
 
-The `aside` element usually lives alongside the `main` and contains _additional_ information _related to_ the main content.
+
+`aside` 元素通常在 `main`的旁边来补充一些与主要内容相关的_额外_的信息。
+
 
 ### Section
 
-The `section` element allows to **group**
+### Section
 
-Sections _themselves_ don't carry a specific meaning. It's more about the _relation between its child elements_ rather than its own meaning within the overall page.
+`section` 元素 可以用来给内容 **分组**
 
-The [MarkSheet homepage](http://marksheet.io) displays 3 sections:
 
-* the **heading** (logo, title, subtitle)
-* the **introduction** (_"Short"_, _"Simple"_, _"Free"_)
-* the **chapters** (_"Web"_, _"HTML"_, _"CSS"_)
+Sections 并没有什么特殊含义。它通常是_连接它的子元素_，形成页面中的一个分组。
 
-They all reside within the homepage `main` element, but are divided logically to group similar content and provide more meaning to the page's structure.
 
+The [Fe Primary Tutorial](http://fe-primary-tutorial.itlutoushe.com/) 有3个 Section:
+
+* **头部** (标题)
+* **简介** (_"短"_, _"简单"_)
+* **章节** (_"Web"_, _"HTML"_, _"CSS"_)
+
+它们都包含在`main`元素里面，但是它们按照有逻辑的将页面按照内容分割成了几个组，让页面更加结构化。
 
 
