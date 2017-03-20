@@ -6,16 +6,22 @@ section: html
 ---
 
 Up until now, we've been looking at _isolated_ snippets of HTML code. But an **HTML document** (or webpage, it means the same thing) requires a specific structure in order to be **valid**.
+直到现在，我们一直着眼于_孤立的_HTML代码片段。但是一个有效的**HTML文档**（或网页，同样的意思）需要一个具体的结构。
 
 Why do we care about _validating_ an HTML document?
+为什么我们关心一个HTML文档的有效性呢？
 
 * **correct**: a valid document is _correctly displayed_ by the browser
+* **准确性**：一个有效的文档可以被浏览器正确地显示
 * **debugging**: invalid HTML code can trigger bugs hard to target
+* **可调试**：无效的HTML代码很难触发错误
 * **maintenance**: a valid document is easier to _update_ later, even by someone else
+* **可维护**：一个有效的文档以后很容易_升级_，即使是任何一个人
 
-### Doctype
+### 文档类型
 
 The first information to provide is the _type_ of HTML document we're writing: the **Doctype**.
+第一个提供的信息是HTML文档的_类型_，我们称之为：**文档类型**
 
 Think of the doctype as the version of a car throughout the years: a Ford Fiesta bought in 1986 was a Fiesta 2. If you buy one today, it's a Fiesta 7.
 

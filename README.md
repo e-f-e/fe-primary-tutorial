@@ -23,7 +23,9 @@
     * HTML Block and Inline - @fanmingfei - 完成
     * HTML Hierarchy - @fanmingfei - 完成
     * HTML Semantics - @liuchunhui - 翻译中
-    * HTML Links - @melanc - 翻译中
+    * HTML Links - @melanc - 完成
+    * HTML Valid and Document - @melanc - 完成
+    * HTML Content - @melanc - 完成
 
 
 ## License
