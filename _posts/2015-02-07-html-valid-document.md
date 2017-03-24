@@ -1,40 +1,48 @@
 ---
 layout: post
-title: "A <strong>valid</strong> HTML document"
+title: "一个 <strong>合法的</strong> HTML 文档"
 subtitle: "Some boilerplate"
 section: html
 ---
 
-Up until now, we've been looking at _isolated_ snippets of HTML code. But an **HTML document** (or webpage, it means the same thing) requires a specific structure in order to be **valid**.
+直到这里，我们看到的都是一些代码片段，**HTML 文档** 需要包含一套具体的结构才会**合法**。
 
-Why do we care about _validating_ an HTML document?
+为什么我们要关注HTML文档的合法性？
 
-* **correct**: a valid document is _correctly displayed_ by the browser
-* **debugging**: invalid HTML code can trigger bugs hard to target
-* **maintenance**: a valid document is easier to _update_ later, even by someone else
+* **正确**：一个合法的HTML文档会被浏览器_正确显示_
+* **易调试**：不合法的HTML代码容易产生Bug并且不好调试
+* **可维护**：一个合法的HTML文档更容易被_更新_，多人协作也不会有问题
 
 ### Doctype
 
-The first information to provide is the _type_ of HTML document we're writing: the **Doctype**.
 
-Think of the doctype as the version of a car throughout the years: a Ford Fiesta bought in 1986 was a Fiesta 2. If you buy one today, it's a Fiesta 7.
+第一个需要提供的信息是HTML的文档_类型_，我们需要：**Doctype**。
 
-There used to be multiple versions of HTML coexisting (XHTML and HTML 4.01 have been competing standards). Nowadays, **HTML 5** is the norm.
 
-To tell the browser that the HTML document is an HTML 5, just start your document with the following line:
+你可以把**Doctype**看成Iphone手机的版本，10年大家买的都是Iphone4, 17年大家都买Iphone8了。
+
+
+曾经HTML有很多的版本（XHTML和HTML 4.01 一直是标准），现在**HTML 5*是最新规范。
+
+
+
+告诉浏览器HTML文档的版本是HTML 5，你仅需要在文档的开头第一行写：
 
 {% highlight html %}
 <!DOCTYPE html>
 {% endhighlight %}
 
-That's it. Just set it and forget it.
 
-You may wonder why this HTML 5 doctype doesn't mention the number "5". The W3C thought the previous doctype definitions were too confusing and took the opportunity to simplify it by removing any mention of the HTML version.
+就酱紫。
+
+
+你一定奇怪为什么HTML 5的 Doctype 里面没有 “5”，W3C觉得以前的版本太混乱了，就趁这个机会把它变得简单了，所以移除了 Doctype 里的所有版本号。
 {: .info}
 
-### The <html> element
+### <html> 元素
 
-Apart from the doctype line, **all** your HTML document must be wrapped inside an `<html>` element:
+
+除了 Doctype ，**所有**的HTML必须在`<html>`元素内：
 
 {% highlight html %}
 <!DOCTYPE html>
@@ -43,13 +51,18 @@ Apart from the doctype line, **all** your HTML document must be wrapped inside a
 </html>
 {% endhighlight %}
 
-The `<html>` is technically the **ancestor** of all HTML elements.
+
+`<html>` 是所有HTML元素的**祖先**元素。
 
 ### <head>
 
-The same way attributes carry additional information for an HTML element, the `<head>` element carries additional information for the _whole_ webpage.
 
-For example, the **title** of the page (displayed on the tab) is located in the `<head>`:
+我们需要给HTML文档添加一些附加信息，`<head>`元素就是为了给**整个**网页添加属性。
+
+
+
+比如，页面的**标题**就是在`<header>`内：
+
 
 {% highlight html %}
 <head>
@@ -57,7 +70,8 @@ For example, the **title** of the page (displayed on the tab) is located in the 
 </head>
 {% endhighlight %}
 
-Other HTML elements can appear in the `<head>`, and _only_ in the `<head>`:
+
+其他HTML元素可以并**只能**写在`<head>`内。
 
 * `<link>`
 * `<meta>`
@@ -65,29 +79,33 @@ Other HTML elements can appear in the `<head>`, and _only_ in the `<head>`:
 
 ### <body>
 
-While the `<head>` only contains metadata not meant to be displayed anywhere (apart from the `<title>`), the `<body>` element is where we write all our content. Everything _inside_ the `<body>` will be **displayed** in the browser window.
 
-### A complete valid HTML document
+而`<head>`只包含元数据，而不是在任何地方显示（除了`<title>`），`<body>`元素是我们写页面内容的地方。 在浏览器中，包含在`<body>`会被**显示**。
 
-Combining all these requirements, we can write a simple and valid HTML document:
+
+### 一个完整合法的HTML文档
+
+
+结合上面所有的信息，我们写一个简单的合法的HTML文档。
 
 {% highlight html %}
 <!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8">
-    <title>MarkSheet</title>
-    <meta name="description" content="A simple HTML and CSS tutorial">
+    <title>挨踢路透社</title>
+    <meta name="description" content="挨踢路透社 Future FE!">
   </head>
   <body>
-    <p>Hello World!</p>
+    <p>Future FE!</p>
   </body>
 </html>
 {% endhighlight %}
 
-If you view this example in your browser, you'll see that:
+如果你在浏览器中查看你将会看到：
 
-* _"MarkSheet"_ is written on the browser tab
-* _"Hello World!"_ is the only text displayed in the window, because it's the only content _within_ the `<body>`
+* _"挨踢路透社"_ 被展示在了浏览器的tab标签上
+* _"Future Fe!"_ 只有这一串文字被展示在了页面上，因为`<body>`标签中只写了这些内容。
 
-<p>The <abbr title="World Wide Web Consortium">W3C</abbr> provides a <a href="http://validator.w3.org/#validate_by_input">Markup Validation Service</a> to check any HTML document for errors and warnings.</p>
+
+<p> <abbr title="World Wide Web Consortium">W3C</abbr> 提供了一个 <a href="http://validator.w3.org/#validate_by_input">Markup Validation Service</a>来检查HTML文档合法性</p>

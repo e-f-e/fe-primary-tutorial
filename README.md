@@ -23,6 +23,7 @@
     * HTML Hierarchy - @fanmingfei - 完成
     * HTML Semantics - @liuchunhui - 完成
     * HTML Formatting - @fanmingfei - 完成
+    * HTML Valid Document -@fanmingfei -完成
     * HTML Text - @fanmingfei - 完成
     * HTML Inline Semantics - @fanmingfei - 完成
     * HTML Links - @melanc - 完成
