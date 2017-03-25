@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "HTML <strong>Links</strong>"
+title: "HTML <strong>链接</strong>"
 subtitle: "The <strong>core</strong> of the Web"
 section: html
 ---

@@ -1,37 +1,37 @@
 ---
 layout: post
-title: "HTML <strong>Forms</strong>"
+title: "HTML <strong>表单</strong>"
 subtitle: "To make a page <strong>interactive</strong>"
 section: html
 ---
 
-While navigating the Web, a user's interaction is mostly only to click on **links** in order to navigate through webpages.
+在单纯的导航网站，用户的交互仅仅是通过**链接**来浏览各个页面。
 
-But the Web understands that a user is sometimes required to provide his own **input**. These types of interaction include:
+但是网站很多时候要包含一些可以**输入**的元素。这些交互包括：
 
-* signing up and logging in to websites
-* entering personal information (name, address, credit card details...)
-* filtering content (by using dropdowns, checkboxes...)
-* performing a search
-* uploading files
+* 给网站添加注册登录功能
+* 输入用户的信息（姓名、地址、银行卡信息）
+* 过滤内容 （下拉菜单，选择框）
+* 搜索
+* 上传文件
 
-To accomodate for these needs, HTML provides interactive **form controls**:
+为了满足这些需求，HTML提供了交互方式， **表单控件**：
 
-* text inputs (for one or multiple lines)
-* radio buttons
-* checkboxes
-* dropdowns
-* upload widgets
-* submit buttons
+* 文本输入 （一行或多行）
+* 单选按钮
+* 复选框
+* 下拉
+* 上传组件
+* 提交按钮
 
-These controls use different HTML **tags**, but most of them use the `<input>` tag. Because it is a self-closing element, the _type_ of input is defined by its `type` attribute:
+这些工具都是由HTML**标签**来控制，多数都是使用`<input>`标签。因为这是一个自闭和元素，它的_类型_都是通过`type`属性定义的。
 
 {% highlight html %}
-<!-- A text input -->
+<!-- A 文本框 -->
 <input type="text">
-<!-- A checkbox -->
+<!-- A 复选框 -->
 <input type="checkbox">
-<!-- A radio button -->
+<!-- A 单选按钮 -->
 <input type="radio">
 {% endhighlight %}
 
@@ -43,83 +43,93 @@ These controls use different HTML **tags**, but most of them use the `<input>` t
   <input type="radio">
 </div>
 
-### The Form element
+### 表单元素
 
-The `<form>` is a block-level element thats defines an **interactive** part of a webpage. As a result, all form controls (like `<input>`, `<textarea>` or `<button>`) must appear _within_ a `<form>` element.
 
-Two HTML attributes are **required**:
+`<form>`是一个块级元素，它定义了一个网页内用来**交互**的部分。所有的表单控件元素（`<input>`、 `<textarea>` 或 `<button>`）必须写在`<form>`标签内。
 
-* `action` contains an address that defines _where_ the form information will be sent
-* `method` can be either GET or POST and defines _how_ the form information will be sent
+两个HTML属性是`<form>`标签必须包括的：
 
-Usually, the form information is sent to a **server**. _How_ this data will then be processed goes beyond the scope of this tutorial.
+* `action` 定义这个表单的提交地址，这些内容将会提交到某一个地址。
+* `method` 定义表单提交请求的类型，比如GET或者POST。
 
-Think of a form as a collection of input controls that work together to perform a **single** operation. If you wrote a login form, you could have **3** controls:
 
-* a email input `<input type="email">`
-* a password input `<input type="password">`
-* a submit button `<input type="submit">`
+通常，表单信息被发送到**服务端**。不过这些内容不是这个教程所覆盖的。
 
-These 3 HTML elements would be enclosed within a single `<form action="/login" method="POST">`.
+一个表单包括了一系列的input，来完成**一个**操作。如果你想写一个登陆表单，你需要3个控件：
+ submit button `<input type="submit">`
 
-You could similarly add a signup form within the same HTML page, in a separate `<form>` element.
+* a 电子邮箱输入框 `<input type="email">`
+* a 密码输入框 `<input type="password">`
+* a 提交按钮 `<input type="submit">`
 
-### Text inputs
 
-Almost all forms require **textual** input from users, in order for them to enter their name, email, password, address... Text form controls come in different variations:
+这3个HTML元素需要被`<form action="/login" method="POST">`包裹。
+
+
+你可以创建一个相似的注册页面，使用一个新的`<form>`元素。
+
+
+### 文本输入
+
+
+几乎所有的表单都需要用户输入文本，为了让用户输入用户名、邮箱、密码、地址等，文本表单控件会有一些差异：
+
 
 <div class="table">
   <table>
     <tr>
-      <th>Text</th>
+      <th>文本</th>
       <td><code>&lt;input type="text"&gt;</code></td>
       <td><input type="text"></td>
-      <td>Allows any type of character</td>
+      <td>可以输入一些文字</td>
     </tr>
     <tr>
       <th>Email</th>
       <td><code>&lt;input type="email"&gt;</code></td>
       <td><input type="email"></td>
-      <td>Might display a warning if an invalid email is entered</td>
+      <td>必须输入Email，如果格式错误会提示。</td>
     </tr>
     <tr>
-      <th>Password</th>
+      <th>密码</th>
       <td><code>&lt;input type="password"&gt;</code></td>
       <td><input type="password"></td>
-      <td>Shows dots as characters</td>
+      <td>将会把字符展示成*号</td>
     </tr>
     <tr>
-      <th>Number</th>
+      <th>数字</th>
       <td><code>&lt;input type="number"&gt;</code></td>
       <td><input type="number"></td>
-      <td>Up/Down keyboard keys can be used</td>
+      <td>文本框里会出现上/下，可以调整数值</td>
     </tr>
     <tr>
-      <th>Telephone</th>
+      <th>电话</th>
       <td><code>&lt;input type="tel"&gt;</code></td>
       <td><input type="text"></td>
-      <td>Can trigger an autofill</td>
+      <td>可以自动补全一些信息</td>
     </tr>
     <tr>
-      <th>Multiple line text</th>
+      <th>多行文本呢</th>
       <td><code>&lt;textarea&gt;&lt;/textarea&gt;</code></td>
       <td><textarea></textarea></td>
-      <td>Can be resized</td>
+      <td>可以调整大小</td>
     </tr>
   </table>
 </div>
 
-Although these inputs look very similar and allow users to enter _any_ kind of text (even wrong input), their _type_ provides specific **semantics** to the input, by defining what kind of information it is **supposed** to contain.
 
-Browsers can subsequently slightly alter a control's interface to increase its _interactivity_ or hint at what kind of content is _expected_.
+这些输入框看起来相同，都允许用户输入文字，它们的_type_属性给它们提供了一些**语义**，通过定义它的类型，可以设置它所**支持**的信息。
 
-For example, password inputs show dots instead of characters.
+
+浏览器给这些控件一些默认的外观，来增加交互感或者提醒用户这里需要输入什么类型信息。
+
+比如，密码输入框的字符将会被*提到。
 
 <div class="result">
   <input type="password" value="hunter2">
 </div>
 
-And number inputs allow their value to be increased/decreased using up and down keys.
+数字输入框，可以通过点击上下键增加和减少数字。
 
 <div class="result">
   <input type="number" value="12">
@@ -127,21 +137,23 @@ And number inputs allow their value to be increased/decreased using up and down 
 
 ### Placeholders
 
-Text inputs can display a **placeholder** text, that will disappear as soon as some text is entered.
+### 占位符
+
+文本输入框可以展现一些**占位符**，就是在文本框没有内容的时候自动展示出来的文本。
 
 {% highlight html %}
-<input type="text" placeholder="Enter your name">
+<input type="text" placeholder="请输入昵称">
 {% endhighlight %}
 
 <div class="result">
-  <input type="text" placeholder="Enter your name">
+  <input type="text" placeholder="请输入昵称">
 </div>
 
-If you start typing something, you'll see the text _"Enter your name"_ disappear.
+如果你开始输入内容，你会发现“请输入昵称”消失了。
 
 ### Labels
 
-Because form elements on their own are not very descriptive, they are usually preceded by a text **label**.
+有时候form元素自身是无法描述自己是用来做什么的，所以会给form元素添加一些**label**。
 
 {% highlight html %}
 <label>Email</label>
@@ -153,127 +165,133 @@ Because form elements on their own are not very descriptive, they are usually pr
   <input type="email">
 </div>
 
-While placeholders already provide some hint at what content is expected, labels have the advantage of remaining visible at all times, and can be used alongside other types of form controls, like checkboxes or radio buttons.
+Placeholders 已经暗示了输入框需要输入什么内容，但是用户输入内容后就会消失，labels可以一直显示，它可以写在form控件的旁边，像复选框或者单选按钮一样。
 
-Although you could use short paragraphs to describe form elements, using `<label>` is semantically more valid because they only exist within forms, and can be paired with a specific form control by using the `for` attribute and matching its value with the input's `id`.
+
+尽管你你可以使用短的段落去描述form元素，使用`<label>`在于以上更加合法，因为它仅仅在表单里面存在。并且它有`for`属性和 input 上的 `id` 属性是匹配的。
 
 {% highlight html %}
-<label for="first_name">First name</label>
+<label for="first_name">名字</label>
 <input id="first_name" type="text">
 {% endhighlight %}
 
 <div class="result">
-  <label for="first_name">First name</label>
+  <label for="first_name">名字</label>
   <input id="first_name" type="text">
 </div>
 
-Clicking on the label will focus the text input and place the text cursor inside. While this pairing seems useless, it will come in handy with checkboxes and radio buttons.
+点击label将会自动将焦点和光标置于input中。然而这看起来并没什么用，它可以被用在复选框和单选按钮上。
 
-### Checkboxes
+### 复选框
 
-**Checkboxes** are form controls that only have 2 states: checked or unchecked. They basically allow the user to say "Yes" or "No" to something.
+**复选框** 有两个状态：已选 和 未选中。
 
 {% highlight html %}
-<input type="checkbox"> Remember me
+<input type="checkbox"> 记住我
 {% endhighlight %}
 
 <div class="result">
-  <input type="checkbox"> Remember me
+  <input type="checkbox"> 记住我
 </div>
 
-Because it can be hard to click on a small checkbox, it is recommended to wrap a `<label>` around the checkbox **and** its description.
+因为它太小，所以很容易点不到。所以可以添加一个`<label>`在它旁边来描述。
 
 {% highlight html %}
 <label>
-  <input type="checkbox"> I agree to the terms
+  <input type="checkbox"> 我同意
 </label>
 {% endhighlight %}
 
 <div class="result">
   <label>
-    <input type="checkbox"> I agree to the terms
+    <input type="checkbox"> 我同意
   </label>
 </div>
 
-You can click on _"I agree to the terms"_ to toggle the checkbox.
+你可以点击“我同意”来切换选择这个复选框。
 
-By default, a checkbox input is unchecked. You can mark it as checked by using the simply called `checked` attribute.
+默认情况下，复选框是未选中状态。你可以使用`checked`属性来设置选中状态。
 
 {% highlight html %}
 <label>
-  <input type="checkbox" checked> Use as my billing address
+  <input type="checkbox" checked> 记住登陆状态
 </label>
 {% endhighlight %}
 
 <div class="result">
   <label>
-    <input type="checkbox" checked> Use as my billing address
+    <input type="checkbox" checked> 记住登陆状态
   </label>
 </div>
 
-### Radio buttons
+### 单选按钮
 
-You can present the user a **list of options** to choose from by using radio buttons.
 
-For this form control to work, your HTML code needs to **group** a list of radio buttons together. This is achieved by using the _same_ value for the `name` attribute:
+你可以通过单选按钮给用户提供一个**选项列表**，供用户挑选。
+
+这个表单控件需要提供**一组**单选按钮。这一组选项按钮的`name`属性必须一致。
+
 
 {% highlight html %}
 <label>Marital status</label>
 <label>
   <input type="radio" name="status">
-  Single
+  大一
 </label>
 <label>
   <input type="radio" name="status">
-  Married
+  大二
 </label>
 <label>
   <input type="radio" name="status">
-  Divorced
+  大三
 </label>
 <label>
   <input type="radio" name="status">
-  Widowed
+  大四
 </label>
 {% endhighlight %}
 
 <div class="result">
   <label>Marital status</label>
-  <br>
   <label>
     <input type="radio" name="status">
-    Single
+    大一
   </label>
-  <br>
   <label>
     <input type="radio" name="status">
-    Married
+    大二
   </label>
-  <br>
   <label>
     <input type="radio" name="status">
-    Divorced
+    大三
   </label>
-  <br>
   <label>
     <input type="radio" name="status">
-    Widowed
+    大四
   </label>
 </div>
 
-Because all radio buttons use the same _value_ for their `name` attribute (in this case the value `"status"`), selecting one option will unselect all other ones. Radio buttons are said to be **mutually exclusive**.
 
-#### Difference between radio buttons and checkboxes
+因为所有的单选按钮使用了相同的`name`属性，所以选择一个选项后，其它选项将会被取消选中。所以单选按钮是互斥的。
 
-While a checkbox exists **on its own**, radio buttons can only appear as a **list** (which means having at least _2_ options).
 
-Also, clicking a checkbox is **optional** while choosing one of the radio buttons is **mandatory**. That's why it is impossible to uncheck a radio button unless choosing a sibling option. But in the end, one of the radio buttons is always selected.
+#### 单选按钮 和 复选框 之间的区别
 
-### Dropdown menus
 
-If the number of options to choose from takes up too much space, you can use `<select>` dropdown menus.
+复选框可以是一个， 单选按钮只能是一组选项。
 
-They work like radio buttons. Only their layout is different.
+
+复选框是**可选择的**，单选按钮是**强制选择**的，这也是为什么你必须点击另外一个选项才会取消当前选项的原因。到最后，radio总是被选择的。
+
+
+### 下拉菜单
+
+
+如果选项特别多，可以使用`<select>`下拉菜单。
+
+
+它的工作原理像单选按钮，但展示不一样。
 
 {% highlight html %}
 <select>
@@ -309,12 +327,13 @@ They work like radio buttons. Only their layout is different.
   </select>
 </div>
 
-#### Multiple choice dropdown menus
 
-If you add the `multiple` attribute, you can provide the ability to select multiple choices.
+#### 多选下拉菜单
+
+如果你给`<select>`添加`multiple`属性，你可以给它多选的能力。
 
 {% highlight html %}
-<label>Which browsers do you have?</label>
+<label>你有哪些浏览器?</label>
 <select multiple>
   <option>Google Chrome</option>
   <option>Internet Explorer</option>
@@ -325,7 +344,7 @@ If you add the `multiple` attribute, you can provide the ability to select multi
 {% endhighlight %}
 
 <div class="result">
-  <label>Which browsers do you have?</label>
+  <label>你有哪些浏览器?</label>
   <br>
   <select multiple>
     <option>Google Chrome</option>
@@ -336,33 +355,35 @@ If you add the `multiple` attribute, you can provide the ability to select multi
   </select>
 </div>
 
-Select multiple options by maintaining Ctrl (or ⌘) and clicking. This can be a good alternative to using multiple checkboxes in a row.
 
-### Example: a complete signup form
+可以通过Ctrl（或者 ⌘）并且点击选择多项。这是一个代替复选框的好方法。
+
+
+### 例子：一个完整的注册表单
 
 {% highlight html %}
 <form action="/signup" method="POST">
   <p>
-    <label>Title</label>
+    <label>标题</label>
     <label>
       <input type="radio" name="title" value="mr">
-      Mr
+      先生
     </label>
     <label>
       <input type="radio" name="title" value="mrs">
-      Mrs
+      夫人
     </label>
     <label>
       <input type="radio" name="title" value="miss">
-      Miss
+      小姐
     </label>
   </p>
   <p>
-    <label>First name</label>
+    <label>名字</label>
     <input type="text" value="first_name">
   </p>
   <p>
-    <label>Last name</label>
+    <label>姓氏</label>
     <input type="text" value="last_name">
   </p>
   <p>
@@ -370,39 +391,38 @@ Select multiple options by maintaining Ctrl (or ⌘) and clicking. This can be a
     <input type="email" value="email">
   </p>
   <p>
-    <label>Phone number</label>
+    <label>手机号</label>
     <input type="tel" value="phone">
   </p>
   <p>
-    <label>Password</label>
+    <label>密码</label>
     <input type="password" value="password">
   </p>
   <p>
-    <label>Confirm your password</label>
+    <label>再次输入密码</label>
     <input type="password" value="password_confirm">
   </p>
   <p>
-    <label>Country</label>
+    <label>国家</label>
     <select>
-      <option>Canada</option>
-      <option>France</option>
-      <option>Germany</option>
-      <option>Italy</option>
-      <option>Japan</option>
-      <option>Russia</option>
-      <option>United Kingdom</option>
-      <option>United States</option>
+      <option>中国</option>
+      <option>发过</option>
+      <option>德国</option>
+      <option>意大利</option>
+      <option>日本</option>
+      <option>美国</option>
+      <option>英国</option>
     </select>
   </p>
   <p>
     <label>
       <input type="checkbox" value="terms">
-      I agree to the <a href="/terms">terms and conditions</a>
+      我同意 <a href="/terms">声明</a>
     </label>
   </p>
   <p>
     <button>
-      Sign up
+      注册
     </button>
   </p>
 </form>
@@ -411,71 +431,73 @@ Select multiple options by maintaining Ctrl (or ⌘) and clicking. This can be a
 <div class="result">
   <form action="/signup" method="POST">
     <p>
-      <label>Title</label>
+      <label>标题</label>
       <label>
         <input type="radio" name="title" value="mr">
-        Mr
+        先生
       </label>
       <label>
         <input type="radio" name="title" value="mrs">
-        Mrs
+        夫人
       </label>
       <label>
         <input type="radio" name="title" value="miss">
-        Miss
+        小姐
       </label>
     </p>
     <p>
-      <label>First name</label>
-      <input type="text">
+      <label>名字</label>
+      <input type="text" value="first_name">
     </p>
     <p>
-      <label>Last name</label>
-      <input type="text">
+      <label>姓氏</label>
+      <input type="text" value="last_name">
     </p>
     <p>
       <label>Email</label>
-      <input type="email">
+      <input type="email" value="email">
     </p>
     <p>
-      <label>Phone number</label>
-      <input type="tel">
+      <label>手机号</label>
+      <input type="tel" value="phone">
     </p>
     <p>
-      <label>Password</label>
-      <input type="password">
+      <label>密码</label>
+      <input type="password" value="password">
     </p>
     <p>
-      <label>Confirm your password</label>
-      <input type="password">
+      <label>再次输入密码</label>
+      <input type="password" value="password_confirm">
     </p>
     <p>
-      <label>Country</label>
+      <label>国家</label>
       <select>
-        <option>Canada</option>
-        <option>France</option>
-        <option>Germany</option>
-        <option>Italy</option>
-        <option>Japan</option>
-        <option>Russia</option>
-        <option>United Kingdom</option>
-        <option>United States</option>
+        <option>中国</option>
+        <option>发过</option>
+        <option>德国</option>
+        <option>意大利</option>
+        <option>日本</option>
+        <option>美国</option>
+        <option>英国</option>
       </select>
     </p>
     <p>
       <label>
-        <input type="checkbox">
-        I agree to the <a href="/terms">terms and conditions</a>
+        <input type="checkbox" value="terms">
+        我同意 <a href="/terms">声明</a>
       </label>
     </p>
     <p>
       <button>
-        Sign up
+        注册
       </button>
     </p>
   </form>
 </div>
 
-There are other form controls available, but we've covered the ones who'll mostly use.
 
-It's time to start **styling** our page.
+有很多可以使用的表单控件，这里我们只列出了一些常用的。
+
+
+可以开始美化我们的页面啦！
+
