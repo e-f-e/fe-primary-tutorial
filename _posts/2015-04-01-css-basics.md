@@ -1,12 +1,10 @@
 ---
 layout: chapter
-title: "CSS <strong>Basics</strong>"
+title: "CSS <strong>基础</strong>"
 subtitle: "Painting with code"
 section: css
 ---
 
-While HTML is about defining the <em>content</em> of a webpage, CSS is about <strong>styling</strong> a webpage. It means setting colors, fonts, dimensions, margins, positions, of a webpage's <strong>elements</strong>.
+HTML 是定义网页**内容**的， CSS 是修改网页样式的。可以修改页面内**元素**的颜色、字体、尺寸、边距、位置……
 
-HTML is inert. CSS is fluid.
-
-CSS brings a webpage to life, by applying a coat of paint on its static content, and elevates its purpose through color, space, emphasis and motion.
+CSS 赋予网页生命，它让原本自安天命的网页充满色彩，栩栩如生。
