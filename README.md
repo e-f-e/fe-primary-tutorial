@@ -16,7 +16,7 @@
     * introduction.md - @yangxiaofu - 翻译中
     * internet.md - @yangxiaofu - 翻译中
     * web.md - @yangxiaofu - 翻译中
-    * browser.md - @xiaowang - 翻译中
+    * browser.md - @xiaowang - 完成
     * HTML Basic - @fanmingfei - 完成
     * HTML Syntax - @fanmingfei - 完成
     * HTML Block and Inline - @fanmingfei - 完成
@@ -33,6 +33,8 @@
     * HTML Forms - @fanmingfei - 完成
     * CSS Basics - @fanmingfei -完成
     * Why CSS Exists - @fanmingfei - 完成
+    * CSS Syntax - @xiaowang - 翻译中
+    * CSS Selectors - @xiaowang - 翻译中
     
     
 ## License
