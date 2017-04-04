@@ -36,6 +36,7 @@
     * CSS Syntax - @xiaowang - 翻译中
     * CSS Selectors - @xiaowang - 翻译中
     * CSS Inheritance - @fanmingfei - 完成
+    * CSS Priority - @fanmingfei - 完成
     
     
 ## License
