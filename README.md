@@ -33,7 +33,7 @@
     * HTML Forms - @fanmingfei - 完成
     * CSS Basics - @fanmingfei -完成
     * Why CSS Exists - @fanmingfei - 完成
-    * CSS Syntax - @xiaowang - 翻译中
+    * CSS Syntax - @xiaowang - 完成
     * CSS Selectors - @xiaowang - 翻译中
     * CSS Inheritance - @fanmingfei - 翻译中
     
