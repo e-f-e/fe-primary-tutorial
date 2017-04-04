@@ -1,46 +1,46 @@
 ---
 layout: post
-title: "CSS <strong>Color</strong> units"
+title: "CSS <strong>颜色</strong> 单位"
 subtitle: "Different ways to define <strong>colors</strong>"
 section: css
 ---
 
-**Colors** are widely used in CSS, whether for text color, background color, gradients, shadows, borders... There are several ways to define colors in CSS, each with their own pros and cons.
+**颜色** 在CSS中运用广泛，比如文字颜色、背景颜色、渐变、阴影、边框... 这里有几种定义颜色的方式，他们各有利弊。
 
-The `color` property defines the color of the **text**. It is pretty straightforward. What is more important is the different types of **color units** available.
+`color` 属性定义**文字**颜色。这很简单。本文的重点是多种可使用的**颜色单位**。
 
-### Color names
+### 颜色名字
 
-CSS provides [145 colors names](https://developer.mozilla.org/en-US/docs/Web/CSS/color_value), from the most basic (black, white, orange, yellow, blue...) to the more specific (lawngreen, orchid, crimson...).
+CSS 提供了 [145个颜色名](https://developer.mozilla.org/en-US/docs/Web/CSS/color_value), from the most basic (black, white, orange, yellow, blue...) 非常具体。
 
 {% highlight css %}
 body{ color: black;}
 a{ color: orange;}
 {% endhighlight %}
 
-Because the color names are hard to remember, and because you probably want very specific colors, color names are not often used.
+因为颜色名并不容易记住，我们需要更加具体的颜色，所以颜色名不经常用。
 
 ### rgb
 
-Computer monitors, TVs, mobile phones, all use the RGB color model to display colors. Basically, each color is defined by a combination of Red, Green, and Blue. There are 256 possible values for Red, Green or Blue. Because computers start counting at 0 (zero), the maximum value is 255.
+计算机显示器、电视、手机、都是用RGB颜色模式来展示颜色。本质来讲，每一个颜色都是通过红、绿、蓝混合而成，三种颜色分别有256个值。因为计算机计数从0开始255结束。
 
-Considering a color is the result of a _combination_ of Red, Green and Blue, and because each of these 3 colors have 256 possible values, there are `256 * 256 * 256 = 16,777,216` possible colors available.
+考虑到一个颜色是红、绿、蓝的混合结果，而每个颜色只有256个值，所以有`256 * 256 * 256 = 16,777,216`个颜色可以使用。
 
-Because the RGB model is directly related to how colors are _physically_ rendered, it has become a CSS color unit.
+RGB模式成为CSS的颜色单位的主要原因是因为它与颜色的物理渲染直接相关。
 
-For example, the red color of this website is 219 amounts of Red, 78 of Green, and 68 of Blue:
+举个例子，红色的数值是红色219，绿色78，蓝色是68：
 
 {% highlight css %}
 a{ color: rgb(219, 78, 68);}
 {% endhighlight %}
 
-The black color is no amount of either Red, Green or Blue:
+黑色没有数值：
 
 {% highlight css %}
 body{ color: rgb(0, 0, 0);}
 {% endhighlight %}
 
-On the other side of the spectrum, white is the full amount of each Red, Green and Blue:
+在色谱的另一边，白色是满值的：
 
 {% highlight css %}
 body{ color: rgb(255, 255, 255);}
@@ -48,16 +48,16 @@ body{ color: rgb(255, 255, 255);}
 
 ### rgba
 
-The `rgba` color unit is `rgb` to which we add an **alpha** value (ranging from 0 to 1, in decimal values), which defines how transparent the color is:
+`rgba`颜色代为是`rgb`颜色单位多了 **alpha** 值（取值范围是0-1之前，是一个小数值），他定义了这个颜色的透明度。
 
 {% highlight css %}
 body{ color: rgba(0, 0, 0, 0.8);}
 {% endhighlight %}
 
-A slightly transparent black color.
+有一点透明的黑色
 {: .info}
 
-The purpose of a color being transparent is to blend with the background, and consequently look slightly different depending on the context. It is particularly useful for **background colors**.
+颜色透明的目的是与背景融合，因此根据上下文看起来稍有不同。对于**背景颜色**非常有用。
 
 ### hsl and hsla
 
