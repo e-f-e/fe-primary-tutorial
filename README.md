@@ -35,6 +35,7 @@
     * Why CSS Exists - @fanmingfei - 完成
     * CSS Syntax - @xiaowang - 翻译中
     * CSS Selectors - @xiaowang - 翻译中
+    * CSS Inheritance - @fanmingfei - 翻译中
     
     
 ## License
