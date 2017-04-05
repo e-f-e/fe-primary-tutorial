@@ -1,54 +1,55 @@
 ---
 layout: post
-title: "CSS <strong>Size</strong> units"
+title: "CSS <strong>尺寸</strong> 单位"
 subtitle: "Sizing for <strong>content</strong> and <strong>space</strong>"
 section: css
 ---
 
-There many CSS properties that require **size units**:
+有几种 CSS 属性用到了 **尺寸单位**：
 
-* `font-size` defines the size of the text
-* `border-width` defines the weight of element borders
-* `margin` defines the spacing between elements
-* `left/right/top/bottom` allows to position and move elements
+* `font-size` 定义文字大小
+* `border-width` 定义边框的宽度
+* `margin` 定义元素间的间距
+* `left/right/top/bottom` 定位和移动元素
 
-The most used units are:
+最常用的单位是：
 
-* `px` for pixels
-* `%` for percentage
-* `em` for sizing relative to the parent's `font-size` value.
+* `px` 像素
+* `%` 百分比
+* `em` 相对于父级的 `font-size` 来显示尺寸
 
-### Pixels
+### 像素
 
-Because computer screens use pixels to display the content, it is the **most common size unit in CSS**.
+因为计算机屏幕使用像素来展示内容，所以像素是**最常用的尺寸单位**。
 
-It can be used to fix the **width** of an element:
+他可以用来设置元素的**宽**：
 
 {% highlight css %}
 body{ width: 400px;}
 {% endhighlight %}
 
-Or set the **text size**:
+设置**文字大小**：
+
 
 {% highlight css %}
 body{ font-size: 20px;}
 {% endhighlight %}
 
-Pixels in CSS are straightforward because they define **absolute values**: they are not affected by other inherited CSS properties.
+像素在CSS很直观，因为它们定义一个**绝对的值**：它们不受其他CSS属性的影响。
 
-They are also widely used for **positioning** and **spacing** purposes.
+它被广泛的用在设置**定位**和**间距**上。
 
-### Percentages
+### 百分比
 
-Percentages are **relative units**: they rely upon the element's parent and/or ancestor.
+百分比是**相对单位**：它依赖他的父级或祖先元素。
 
-For example, block-level elements like paragraphs naturally take up the **whole width available**. The following CSS rule will resize them to **half** of the width available.
+比如，块级元素像段落，它会占据**整个可用宽度**。使用 CSS 来设置他只占50%可用宽度。
 
 {% highlight css %}
 p{ width: 50%;}
 {% endhighlight %}
 
-Percentages can help set other CSS properties, like text size:
+百分比可以设置其他的CSS属性，像文字大小：
 
 {% highlight css %}
 strong{ font-size: 150%;}
@@ -64,14 +65,15 @@ strong{ font-size: 150%;}
 
 ### Em
 
-`em` is a **relative** unit: it depends upon the value of the element's `font-size`.
+`em` 是一个**相对** 单位：他依赖于元素的 `font-size`.
 
-For example, if the parent has a font-size of `20px` and you apply `font-size: 0.8em` to a child element, this child element will render a font-size of `16px`.
+比如，如果父级元素的 `font-size` 是 `20px`，给子元素设置 `font-size: 0.8em`，子元素的 `font-size` 将被渲染成 `16px`。
 
-Don't confuse the `em` CSS size unit and the `em` CSS selector, which targets `<em>` HTML elements
+不要吧 `em` CSS 尺寸单位和 CSS 选择器里的 `em` 弄混， `em` 选择器是选择 HTML `<em>` 元素的。
 {: .info}
 
-The `em` unit is interesting as you define font sizes of HTML elements _relative_ to one another. To design a pleasing and easy to read webpage, you need consistent visual depth. For example, you want your `<h1>` to be twice as big as your body text, your `<h2>` only 1.5 times as big, and your sidebar slightly smaller. This could easily be achieved in CSS:
+当你根据其他元素定义 HTML 元素文字大小事，`em` 单位就显得非常有意思。设计一个简单令人愉悦的网页，需要统一的视觉深度。你想让 `<h1>` 是正常文字大小的两倍，`<h2>`是1.5倍，而侧边栏偏小。用CSS实现起来很简单：
+
 
 {% highlight css %}
 body{ font-size: 16px;}
@@ -80,9 +82,9 @@ h2{ font-size: 1.5em;}      /* = 24px */
 aside{ font-size: 0.75em;}  /* = 12px */
 {% endhighlight %}
 
-If you decide to change the size of your body text, the relative sizes of your headings and sidebar will **change accordingly**, and your webpage will remain **visually balanced**.
+如果你决定更换页面正常的文字大小，标题和侧边栏的会相应的变化，你的网页将会保持**视觉平衡**，
 
-By just changing one value, all other values are altered:
+通过修改一个值，所有的值都会被修改：
 
 {% highlight css %}
 body{ font-size: 20px;}
@@ -93,7 +95,7 @@ aside{ font-size: 0.75em;}  /* = 16px */
 
 ### Rem
 
-The `rem` unit is similar to `em`, but instead of depending upon the _parent's_ value, it relies upon the **root element's** value, which is the `<html>` element.
+`rem` 单位和 `em` 相似， 但他不是依赖_父级_的值，而是依赖**根元素**的值，也就是 `<html>` 元素。
 
 {% highlight css %}
 html{ font-size: 18px;}
@@ -102,14 +104,14 @@ h1{ font-size: 2rem;}       /* = 36px */
 h2{ font-size: 1.5rem;}     /* = 27px */
 {% endhighlight %}
 
-The difference between `rem` and `em` is that `rem` values are **fixed** while `em` values can _multiply_ between each other.
+`rem` 和 `em`的不同点是，`rem` 的值是**固定**的，`em` 的值在不同元素之间展现出来的尺寸是不同的。
 
-If you set your `html{ font-size: 18px;}`:
+如果你设置 `html{ font-size: 18px;}`：
 
-* `2rem` will always be equal to `36px`, no matter where you use in your CSS
-* `2em` will always be equal to **double** the parent's `font-size`, so not necessarily `36px`
+* `2rem` 他总是和 `36px` 是相等的。不管你在 CSS 的什么位置使用
+* `2em` 他总是父元素 `font-size` 的两倍，不一定是 `36px`
 
-Quick example where `2em` is different from `2rem`:
+简单的例子展示 `2em` 和 `2rem` 的区别：
 
 {% highlight css %}
 html{ font-size: 20px;}
@@ -118,10 +120,10 @@ p span{ font-size: 2em;}      /* = 16px * 2 = 32px */
 p strong{ font-size: 2rem;}   /* = 20px * 2 = 40px */
 {% endhighlight %}
 
-The `span` rely upon the `p` font-size value while the `strong` rely upon the `html` font-size value.
+`span` 依赖 `p` 的 `font-size` 的值，`strong` 依赖 `html` 的 `font-size`。
 
-### Which unit to use?
+### 我们使用哪一种单位？
 
-I'd recommend **pixels** to start with: as they're absolute values, they aren't affected by the element's context. They are straightforward, allow to set the text size, image dimensions, border width, position coordinates...
+我推荐**像素**，像那些绝对值以及不依赖其他元素的设置。他很简单，可以用于设置文字大小，图片尺寸，表格宽度，定位...
 
-**Percentage** and **em** values can be used alongside pixels, for relative text sizes especially.
+**百分比**和 **em** 可以用来配合像素，尤其是相对的文字大小。
