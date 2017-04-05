@@ -1,43 +1,44 @@
 ---
 layout: post
-title: "CSS <strong>Priority</strong>"
+title: "CSS <strong>优先级</strong>"
 subtitle: "When several rules <strong>collide</strong>"
 section: css
 ---
 
-An HTML element can be targeted by **multiple CSS rules**. Let's use a simple paragraph for example:
+一个HTML元素可以被 **多个CSS** 命中，让我们用一个简单的段落举例：
+
 
 {% highlight html %}
 <p class="message" id="introduction">
-  MarkSheet is a free HTML and CSS tutorial.
+  This is a free HTML and CSS tutorial.
 </p>
 {% endhighlight %}
 
-We can alter this paragraph just by using its **tag name**:
+我们可以通过 **标签名** 修改这个段落：
 
 {% highlight css %}
 p{ color: blue;}
 {% endhighlight %}
 
-Or we can use its **class name**:
+或者我们可以使用 **类名**：
 
 {% highlight css %}
 .message{ color: green;}
 {% endhighlight %}
 
-Or we can use its **id**:
+或者我们可以使用 **id**：
 
 {% highlight css %}
 #introduction{ color: red;}
 {% endhighlight %}
 
-Because the browser can only pick **one color** to apply on this paragraph, it will have to decide which CSS rule takes **priority** over other ones. This is what CSS priority (or CSS _specificity_ is about).
+因为浏览器只能给一个段落赋予**一种颜色**，他的颜色决定于CSS中**优先级**最高的。这是 CSS 的优先级。
 
-In our example, the paragraph will be **red** because an `#id` selector is more _specific_ and thus more **important** than other selectors.
+在我们的例子中，这个段落将会被渲染成**红色**，因为`id`选择器是最_明确_的，比其他选择器**权重**更高。
 
-### Order of CSS rules
+### CSS 选择器的排序
 
-If similar selectors are in your CSS, the last one defined will take priority.
+如果 CSS 中有相同的选择器作用于一个元素，最后一个将会被优先使用。
 
 {% highlight css %}
 p{ color: green;}
@@ -45,15 +46,15 @@ p{ color: red;}
 /* Paragraphs will be red */
 {% endhighlight %}
 
-### The 100 measure
+### 100分制
 
-One quick way to figure out how "powerful" a CSS rule is, is by measuring the specificty of the **selectors**:
+一个快速判断 CSS 权重的方式，通过度量**选择器**的明确性。
 
-* `#id` selectors are worth 100
-* `.class` selectors are worth 10
-* `tag` selectors are worth 1
+* `#id` 100分
+* `.class` 10分
+* `tag` 1分
 
-The selector with the highest "score" will prevail, _no matter the order in which the CSS rules appear_.
+无论 CSS 出现的顺序怎样，“得分”最高的将会起作用。
 
 {% highlight css %}
 #introduction{ color: red;}
@@ -73,16 +74,16 @@ p{ color: blue;}
   </p>
 </div>
 
-The `#introduction{ color: red;}` rule is more _specific_ than the others because ids must be **unique** throughout a webpage, and can thus only target **one** element.
+`#introduction{ color: red;}` 是最明确的，因为 id 必须是整个页面唯一的，并且只会对应页面中的**一个**元素。
 
-`.message{ color: green;}` can target _any_ HTML element with a `class="message"` attribute, and is consequently less specific. Same goes for `p{ color: blue;}` which can target _any_ HTML paragraph.
+`.message{ color: green;}` 可以作用于_任何_属性有 `class="message"` 的HTML元素，因此没有id那么明确。同样的`p{ color: blue;}`可以作用于_任何_HTML段落。
 
-### How to avoid conflicts
+### 如何避免冲突
 
-While writing your CSS, it's easy to write **conflicting rules**, where the same _property_ is applied several times.
+在写CSS的时候，在几个地方使用相同的属性作用于一个元素的时候，很容易产生冲突。
 
-To avoid that:
+避免做以下的事情：
 
-* only use **classes**: use `.introduction` instead of `#introduction`, even if that element only appears once in your webpage
-* avoid applying **multiple classes** on a single HTML element: don't write `<p class="big red important">` but rather `<p class="title">` which is more semantically descriptive
-* don't use **inline styles** like `<div style="background: blue;">`
+* 仅适用 **类选择器**：使用 `.introduction` 替代 `#introduction`，即使这个元素仅在页面中出现一次。
+* 避免给一个元素设置**多个类名**：不要写`<p class="big red important">`，可以使用 `<p class="title">`替代，使用更语义化的描述。
+* 不要使用**行内样式** 像`<div style="background: blue;">`
