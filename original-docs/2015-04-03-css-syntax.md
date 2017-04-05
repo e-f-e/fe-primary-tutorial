@@ -5,44 +5,44 @@ subtitle: "who{ what: how;}"
 section: css
 ---
 
-The purpose of CSS is to define the layout _and_ styling of your HTML elements. The syntax is very simple:
+CSS的目的是定义HTML元素的布局和样式。 语法很简单：
 
 {% highlight css %}
-/* A CSS rule */
+/* CSS书写规则 */
 selector{ property: value;}
 {% endhighlight %}
 
-You can read that as:
+你可以这样理解它:
 
 {% highlight css %}
 who{ what: how;}
 {% endhighlight %}
 
-CSS is a 3-part process:
+CSS的语法分为三部分:
 
-* the **selector** defines _who_ is targeted, which HTML element(s)
-* the **property** defines _what_ charateristic to alter
-* the **value** defines _how_ to alter that charateristic
+* **选择器**定义目标HTML元素
+* **属性**定义要更改的特征
+* **值**定义如何更改该特性
 
-This whole block (selector/property/value) is a **CSS rule**.
+整个代码块（选择器/属性/值）是一个**CSS规范**
 
-### Quick example
+### 快速举例
 
-Let's say you want to change the color of all your **blockquotes**.
+假设你想改变所有**blockquote**元素的颜色
 
 {% highlight html %}
 <blockquote>Something something</blockquote>
 {% endhighlight %}
 
-Focus on the **tag name** (and forget about the angle brackets <> and the text). In our case, all that remains is _"blockquote"_. There's a direct relation between the tag name and the selector.
+关注**标签名**（往期尖括号<>和文本）。在这种情况下，剩下的就是_"blockquote"_。标签名和选择器之间有直接联系。
 
-Let's use that in our CSS as a **selector**, and let's apply some styling:
+让我们在CSS中使用它作为选择器，并添加一些样式
 
 {% highlight css %}
 blockquote{ background: lightgreen;}
 {% endhighlight %}
 
-Interesting. But now, the text color doesn't really match the background color. Let's improve that:
+有趣的是。现在，文字颜色与背景颜色不一致。 让我们改进一下：
 
 {% highlight css %}
 blockquote{
@@ -51,12 +51,12 @@ blockquote{
 }
 {% endhighlight %}
 
-So 2 things happened:
+所以发生了两件事情：
 
-* we added a _second_ property/value pair, while keeping only _one_ selector: you can set as many properties as you want for any set of selectors
-* we put each property/value pair on its _own line_: like in HTML, the **whitespace** isn't important. It's the special characters `{}` `:` and `;` that matter. As a result, you can format your CSS as you wish, to make it more readable, as long as its syntax remains valid.
+* 我们添加了_第二个_键值对，同时只保留_一个_选择器：你可以为任何选择器设定任意数量的属性。
+* 我们可以把每个键值对放在_一行_：就像HTML一样。**空格键**并不重要。特殊符号`{}` `:` 和 `;` 很重要。因此，您可以根据需要格式化CSS，使其更易于阅读，只要其语法仍然有效。
 
-The `<blockquote>` HTML tag is a **block** element. It has an **inline** counterpart: `<q>`. As they both serve the same purpose (but in different contexts), we'd like to style them identically. We could copy-paste the CSS rule and just change the selector, but there is as you would have guessed, a quicker way:
+`<blockquote>`标签是一个**块级**元素。它有个**行内**元素与其对应。他们都服务于相同的目的（但他们在不同的上下文中），我们希望对他使用相同的样式。我们可以复制粘贴CSS代码，并只改变选择器。但是你可能会用到，一个更快速的方式。
 
 {% highlight css %}
 q,
@@ -66,24 +66,24 @@ blockquote{
 }
 {% endhighlight %}
 
-Now we have 2 selectors and 2 properties. We consequently have a _set_ of selectors and a _set_ of properties (with their respective values).
+现在我们有两个选择器和两个属性。因此，我们有一组选择器和一组属性（具有各自的值）。
 
-We can have multiple selectors, multiple properties, and sometimes (but rarely) multiple values.
+我们可以有多个选择器，多个属性，有时（但很少）会有多个值。
 {: .info}
 
-### Comments
+### 注释
 
-As in HTML, it can be handy to write CSS comments:
+就像在HTML中一样，可以方便地编写CSS注释：
 
 {% highlight css %}
-/* This is a CSS comment */
+/* 这是CSS代码注释 */
 q,
 blockquote{
   background: lightgreen;
   color: darkgreen;
 }
 /*
-Comments are only meant to be read by humans
-and won't be parsed by the computer
+注释仅供人阅读
+并不会被计算机解析
 */
 {% endhighlight %}
