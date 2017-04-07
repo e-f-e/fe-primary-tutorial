@@ -38,6 +38,9 @@
     * CSS Inheritance - @fanmingfei - 完成
     * CSS Priority - @fanmingfei - 完成
     * CSS Size Unit - @fanmingfei - 完成
+    * CSS Reset - @fanmingfei - 完成
+    * CSS Text - @fanmingfei - 完成
+    * CSS Font Family - @fanmingfei - 完成
     
     
 ## License
