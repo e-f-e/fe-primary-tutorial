@@ -24,23 +24,30 @@ The first information to provide is the _type_ of HTML document we're writing: t
 第一个提供的信息是HTML文档的_类型_，我们称之为：**文档类型**
 
 Think of the doctype as the version of a car throughout the years: a Ford Fiesta bought in 1986 was a Fiesta 2. If you buy one today, it's a Fiesta 7.
+想象一下文档类型就像这些年的汽车系列：在1986年买的一辆福特嘉年华是嘉年华2系。假如今天你再买一辆，它是嘉年华7系。
 
 There used to be multiple versions of HTML coexisting (XHTML and HTML 4.01 have been competing standards). Nowadays, **HTML 5** is the norm.
+过去常常有多个HTML版本共存（XHTML和HTML4.01已经完成标准化）。今天**HTML 5**是一种常态。
 
 To tell the browser that the HTML document is an HTML 5, just start your document with the following line:
+为了告诉浏览器一个HTML文档是HTML 5，只需让你的文档以下面的行开始：
 
 {% highlight html %}
 <!DOCTYPE html>
 {% endhighlight %}
 
 That's it. Just set it and forget it.
+就是这样。只需设置它并且忘记它。
 
 You may wonder why this HTML 5 doctype doesn't mention the number "5". The W3C thought the previous doctype definitions were too confusing and took the opportunity to simplify it by removing any mention of the HTML version.
+你可能想知道为什么一个HTML 5文档类型没有提到数字“5”。W3C认为以前的文档类型定义太复杂了，因此趁此机会通过移除任意的HTML版本号来简化它。
 {: .info}
 
 ### The <html> element
+### <html>元素
 
 Apart from the doctype line, **all** your HTML document must be wrapped inside an `<html>` element:
+除了文档类型行，你的**全部**文档必须被一个`<html>`元素包围：
 
 {% highlight html %}
 <!DOCTYPE html>
@@ -50,12 +57,15 @@ Apart from the doctype line, **all** your HTML document must be wrapped inside a
 {% endhighlight %}
 
 The `<html>` is technically the **ancestor** of all HTML elements.
+`<html>`元素是所有HTML元素的**根节点**。
 
-### <head>
+### <head>元素
 
 The same way attributes carry additional information for an HTML element, the `<head>` element carries additional information for the _whole_ webpage.
+同样的属性携带了HTML元素额外的信息，`<head>`元素携带的额外信息作用于 _整个_ 页面。
 
 For example, the **title** of the page (displayed on the tab) is located in the `<head>`:
+例如，页面**标题**（展示在标签页）位于`head`元素内：
 
 {% highlight html %}
 <head>
@@ -64,14 +74,16 @@ For example, the **title** of the page (displayed on the tab) is located in the 
 {% endhighlight %}
 
 Other HTML elements can appear in the `<head>`, and _only_ in the `<head>`:
+其它的HTML元素可以出现在`<head>`中，并且 _只能_ 在`<head>`中：
 
 * `<link>`
 * `<meta>`
 * `<style>`
 
-### <body>
+### <body>元素
 
 While the `<head>` only contains metadata not meant to be displayed anywhere (apart from the `<title>`), the `<body>` element is where we write all our content. Everything _inside_ the `<body>` will be **displayed** in the browser window.
+当`<head>`
 
 ### A complete valid HTML document
 
