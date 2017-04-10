@@ -1,48 +1,49 @@
 ---
 layout: post
-title: "CSS <strong>font-family</strong>"
+title: "CSS <strong>字体</strong>"
 subtitle: "Choosing a <strong>font</strong>"
 section: css
 ---
 
-CSS provides several **font** properties, that directly affect text rendering. The `font-family` property defines _which_ font to use.
+CSS 提供了几个影响文本渲染的 **font** 属性。`font-family`属性定义文本的字体。
 
-### Generic font families
+### 通用字体
 
-Fonts are grouped in 5 **generic** families:
+有五个通用的字体：
 
-* `serif` fonts have small lines attached to the end of each character
-* `sans-serif`
+* `serif` 衬线字体
+* `sans-serif` 非衬线字体
 * `monospace`
 * `cursive`
 * `fantasy`
 
-`cursive` and `fantasy` are never used.
+`cursive` 和 `fantasy` 基本不会被用到。
 {: .info}
 
-Because the `font-family` property is inherited by all HTML children elements, you can apply a font for the whole HTML document by applying it on the ancestor of all HTML elements: the `<body>` element.
+因为 `font-family` 是可以被子元素继承的，所以你可以给整个 HTML 文档内容的祖先元素设置字体：给 `<body>` 元素设置字体。
 
 {% highlight css %}
 body{ font-family: sans-serif;}
 {% endhighlight %}
 
-With this CSS rule, the webpage will use the **sans-serif** font defined by the user in his preferences.
+根据这个 CSS 规则，这个网页将会使用 **sans-serif** 作为首选字体。
 
-### Web-safe fonts
+### Web安全字体
 
-The problem with using generic font names is that the design of your webpage will rely upon the font set by the user in his settings.
+使用通用字体名称的问题是，你的网页的设计将依赖用户在其设置中设置的字体。
 
-As you probably want your webpage to look the same on anyone's computer, you'll want to define a **specific** font to be used. To do so, just use the **name** of the font.
+你很可能想让你的网页在每个人的技术机上看起来一致，所以你需要**明确**你使用的字体。因此，你只需使用字体的**名字**。
 
 {% highlight css %}
 body{ font-family: Arial;}
 {% endhighlight %}
 
-Your webpage will use Arial **provided it is installed on the user's computer**. If the Arial font is not available on the user's computer, it will use the browser's default serif font (which is usually Times).
+你的网页将使用 Arial **只要它被安装在用户的计算机上**。如果 Arial 没有被安装在用户的计算机上，它将自动使用浏览器的默认衬线字体（通常是这样）。
 
-Arial is a safe choice though, because it is installed on all Windows and Mac computers, and on most Linux systems. That is why Arial is considered a **web-safe** font: you can safely use it in your CSS and be almost sure that the user's computer will have it installed.
+Arial 是一个安全的选项，因为它被安装在所有的 Windows 、Mac 计算机以及大多数的Linux系统上。所以 Arial 被称作是 **web安全** 字体：你可以安全的在 CSS 中使用这些字体，因为大多数用户的电脑上都安装了这些字体。
 
-There are **9** web-safe fonts:
+
+这里有**9**个web安全字体：
 
 * Arial
 * Arial Black
@@ -54,18 +55,18 @@ There are **9** web-safe fonts:
 * Trebuchet MS
 * Verdana
 
-### Applying a list of fonts
+### 定义一个字体列表
 
-Although using _any_ of these values for the `font-family` property is a safe bet, you can define **fallback** values by writing a **list of font families**:
+虽然使用使用_这些_ `font-family` 属性是安全的，你可以定义 **fallback**（这个的确不知道咋翻译，反正就是备胎的意思） 通过写**一组字体**。
 
 {% highlight css %}
 body{ font-family: Arial, Verdana, sans-serif;}
 {% endhighlight %}
 
-By defining **multiple values** for `font-family`, the browser will look for the first value `Arial` and use it. If it's not available, it will use the following one `Verdana`. Finally, if that one isn't available either, it will use the browser's default sans-serif font.
+通过给 `font-family` 定义**多个值**，浏览器可以找到第一个值 `Arial` 并且使用它，如果它不能被使用，浏览器将会去使用 `Verdana`，以此类推。直到找到一个可以用的字体，如果前面两个字体都不能用，那么只能使用 sans-serif 了。
 
-It is good practice to use a **generic family** as the last value. If you can't define the specific font to use, you can at least define the _type_ of font you want.
+最佳实践是使用一个**通用字体**来作为最后一个值。如果你不定义一些明确的字体，你可以定义你想要的字体类型。
 
-Because designers want to use more original fonts but still want their webpage to look exactly the same on anyone's computer, it is possible to **include a font** in a webpage. That way, they make sure the font is available even if it's not present on the user's computer, simply because the website provides the font.
+因为设计师想使用更贴合主题的字体，但是又想让所有的用户看到的页面保持一致，所以可能需要在网页中引入一个字体。这样，它们确保了字体可用，即使不在用户的计算机上，但也能被显示出来，因为网站提供了这个字体。
 
-We'll look into this method called `@font-face`, and see how services like Google Fonts or Typekit can help you.
+我们需要查看 `@font-face` 事件，看看 Google Fonts 和 Typekit 这些服务可以帮助你。
