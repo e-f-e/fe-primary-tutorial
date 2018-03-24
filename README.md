@@ -41,7 +41,8 @@
     * CSS Reset - @fanmingfei - 完成
     * CSS Text - @fanmingfei - 完成
     * CSS Font Family - @fanmingfei - 完成
-    
+    * CSS Font Size Style Weight - @fanmingfei - 完成
+    * CSS Line Height - @fanmingfei - 完成
     
 ## License
 

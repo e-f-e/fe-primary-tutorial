@@ -1,68 +1,73 @@
 ---
 layout: post
-title: "CSS <strong>font properties</strong>"
-subtitle: "For <strong>bold</strong> and <em>italic</em> text"
+title: "CSS <strong>文字属性</strong>"
+subtitle: "文字的<strong>加粗</strong> 和 <em>斜体</em>"
 section: css
 ---
 
 ### font-size
 
-We've already covered **[CSS size units](/css-size-units.html)**, which are used to set the font size among other things.
+这个属性可以设置文字大小。
 
-{% highlight css %}
+我们已经了解了 **[CSS 尺寸单位](/css-size-units.html)**，可以用于设置文字的大小。
+
+```css
 p{ font-size: 16px;}
-{% endhighlight %}
+```
 
-Bear in mind that setting a font size of `16px` won't make each letter `16px` high. The _actual_ size of each letter depends on the font-family used.
+文字设置为 `16px` 并不代表每个字都是 `16px`，具体的大小取决于文字的字体。
 
 ### font-style
 
-This property can make your text _italic_:
+这个属性可以把你的文字变成 _斜体_：
 
-{% highlight css %}
+```css
 h2{ font-style: italic;}
-{% endhighlight %}
+```
 
-Default value: `font-style: normal;`.
+默认值是： `font-style: normal;`.
 
-Another possible value is `oblique` but is never used.
+另外一个可选的值是 `oblique`，但是基本不用。
 
 ### font-weight
 
-This property can make your text **bold**:
+这个属性可以设置文字粗细：
 
-{% highlight css %}
+
+```css
 h2{ font-weight: bold;}
-{% endhighlight %}
+```
 
-Default value: `font-weight: normal;`.
+默认值是：`font-weight: normal;`.
 
-Depending on the `font-family` used, there is a range of font weights available, from `100` to `900`:
 
-{% highlight css %}
+根据文字所用的 `font-family`，这里的值可以设置成 `100` 到 `900`：
+
+```css
 font-weight: 100; /* Thin */
 font-weight: 200; /* Extra Light */
 font-weight: 300; /* Light */
-font-weight: 400; /* Which is like font-weight: normal; */
+font-weight: 400; /* 与 font-weight: normal; 相同 */
 font-weight: 500; /* Medium */
 font-weight: 600; /* Semi Bold */
-font-weight: 700; /* Which is like font-weight: bold; */
+font-weight: 700; /* 与 font-weight: bold; 相同 */
 font-weight: 800; /* Extra Bold */
 font-weight: 900; /* Ultra Bold */
-{% endhighlight %}
+```
 
-Very few fonts provide all 9 weights. The [Exo font](http://www.google.com/fonts/specimen/Exo) is one of them.
 
-You'll mostly find 400 (normal) and 700 (bold), and sometimes 300 (light) and 500 (medium).
+很少有字体会支持所有的粗细程度。
+
 
 ### font-variant
 
 This property turn your text into small caps:
+这个可以将文本显示为小型大写字母
 
-{% highlight css %}
+```css
 h2{ font-variant: small-caps;}
-{% endhighlight %}
+```
 
-Default value: `font-variant: normal;`.
+默认值为：`font-variant: normal;`.
 
-It's not a widely used property.
+这个属性用的不多。
