@@ -32,7 +32,7 @@ section: css
 body{ font-size: 16px; line-height: 1.5;}
 ```
 
-通过计算，真是行高是 16 * 1.5 = `24px`
+通过计算，行高是 16 * 1.5 = `24px`
 
 ### Line-height 继承
 
