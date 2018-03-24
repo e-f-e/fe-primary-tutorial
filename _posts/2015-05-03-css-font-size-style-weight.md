@@ -61,7 +61,6 @@ font-weight: 900; /* Ultra Bold */
 
 ### font-variant
 
-This property turn your text into small caps:
 这个可以将文本显示为小型大写字母
 
 ```css
