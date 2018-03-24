@@ -1,25 +1,25 @@
 ---
 layout: post
-title: "CSS <strong>文字属性</strong>"
-subtitle: "文字的<strong>加粗</strong> 和 <em>斜体</em>"
+title: "CSS <strong>字体属性</strong>"
+subtitle: "字体的<strong>加粗</strong> 和 <em>斜体</em>"
 section: css
 ---
 
 ### font-size
 
-这个属性可以设置文字大小。
+这个属性可以设置字体大小。
 
-我们已经了解了 **[CSS 尺寸单位](/css-size-units.html)**，可以用于设置文字的大小。
+我们已经了解了 **[CSS 尺寸单位](/css-size-units.html)**，可以用于设置字体的大小。
 
 ```css
 p{ font-size: 16px;}
 ```
 
-文字设置为 `16px` 并不代表每个字都是 `16px`，具体的大小取决于文字的字体。
+字体设置为 `16px` 并不代表每个字都是 `16px`，具体的大小取决于字体的字体。
 
 ### font-style
 
-这个属性可以把你的文字变成 _斜体_：
+这个属性可以把你的字体变成 _斜体_：
 
 ```css
 h2{ font-style: italic;}
@@ -31,7 +31,7 @@ h2{ font-style: italic;}
 
 ### font-weight
 
-这个属性可以设置文字粗细：
+这个属性可以设置字体粗细：
 
 
 ```css
@@ -41,7 +41,7 @@ h2{ font-weight: bold;}
 默认值是：`font-weight: normal;`.
 
 
-根据文字所用的 `font-family`，这里的值可以设置成 `100` 到 `900`：
+根据字体所用的 `font-family`，这里的值可以设置成 `100` 到 `900`：
 
 ```css
 font-weight: 100; /* Thin */
