@@ -1,17 +1,17 @@
 ---
 layout: post
-title: "HTML <strong>Images</strong>"
+title: "HTML <strong>图片</strong>"
 subtitle: "The major <strong>media</strong> on the Web"
 section: html
 ---
 
-**Images** are the first non-textual content to have appeared on the Web. Most image formats you can find on your computer can also be displayed in your browser: `.jpg`, `.gif` (animated or not), `.png` (transparent or not), `.bmp`...
+**图片** 是第一个在网页上出现的非文本内容. 你电脑上大多数的图片类型都能在浏览器中显示： `.jpg`, `.gif` (可能是个动画), `.png` (可能存在透明色), `.bmp`...
 
-### Syntax
+### 语法
 
-**Images** use the `<img>` element, which is a **self-closing** element (it only has an opening tag).
+**图片** 使用 `<img>` 标签, 它是一个自闭和标签 (它只有开始标签).
 
-The `src` attribute defines the **location** of the image. As with links, you can either use _relative_ or _absolute_ URLs.
+`src` 属性定义图片的来源. 是一个连接, 你可以使用相对 URL 或者绝对 URL。
 
 <ul class="files">
   <li>
@@ -30,46 +30,43 @@ The `src` attribute defines the **location** of the image. As with links, you ca
   </li>
 </ul>
 
-{% highlight html %}
+```html
 <p>
-  Look at this spacecraft landing!
+  看这个热气球！
   <br>
   <img src="soyuz-spacecraft.jpg">
 </p>
-{% endhighlight %}
+```
 
 <div class="result">
   <p>
-    Look at this spacecraft landing!
+    看这个热气球！
     <br>
     <img src="/images/soyuz-spacecraft.jpg">
   </p>
 </div>
 
-### Dimensions
+### 尺寸
 
-Every image has **2 dimensions**: a **width** and a **height**. The previously shown spacecraft image is 394 pixels wide and 284 high.
+每个图片都有 **两个尺寸值**: **width** 和 **height**. 前面的图片宽 394 像素，高 248 像素。
 
-When inserting an image in HTML, you **don't need to specify its dimensions**: the browser will automatically display it in **full size**.
+> 当你将一张图片插入HTML的时候，你**不需要指定它的尺寸**：浏览器会自动根据他的**原始尺寸**展示出来。
 
-If you want to alter the dimensions of an image, although it is possible in HTML, it's recommended to use CSS, as we'll see in later chapters.
-{: .info}
+### 块级还是行内
 
-### Block or inline?
+尽管一个图片有宽度和高度，并且它是一个大矩形，但是图片是一个 **行内元素**，不是一个块级元素。
 
-Although an image has a width and a height, and is visually a big rectangle, an image is **not an HTML block element** but actually an **inline element**.
+为什么 `<img>` 元素是个**行内元素**呢？因为不能包含其他的HTML元素，所以被认为是行内元素，就像`<a>`，`<strong>` 或者 `<em>`。
 
-This is due to the `<img>` element being a **self-closing** element: it can't technically contain any other HTML element, and is thus considered an inline element, like `<a>`, `<strong>` or `<em>`.
+这种行内元素可能会给你意想不到的展现效果：
 
-This inline behavior can have unexpected results:
-
-{% highlight html %}
+```html
 <p>
   There is a frog
   <img src="frog.jpg">
   in the middle of the paragraph!
 </p>
-{% endhighlight %}
+```
 
 <div class="result">
   <p>
@@ -78,5 +75,3 @@ This inline behavior can have unexpected results:
     in the middle of the paragraph!
   </p>
 </div>
-
-Because in HTML the **content is king**, images will be displayed regardless of the quirky layout it might induce, and thoughtfully so.

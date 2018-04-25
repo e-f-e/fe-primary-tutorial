@@ -27,7 +27,7 @@
     * HTML Text - @fanmingfei - 完成
     * HTML Inline Semantics - @fanmingfei - 完成
     * HTML Links - @melanc - 完成
-    * HTML Images - @liuchunhui - 翻译中
+    * HTML Images - @fanmingfei - 完成
     * HTML Tables - @fanmingfei - 完成
     * HTML Structure - @fanmingfei - 完成
     * HTML Forms - @fanmingfei - 完成
